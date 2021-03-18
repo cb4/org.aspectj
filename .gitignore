@@ -17,7 +17,8 @@ log.txt
 
 # IntelliJ IDEA
 *.iml
-.idea/
+.idea/*
+!.idea/runConfigurations
 
 # Visual Studio Code
 .vscode
