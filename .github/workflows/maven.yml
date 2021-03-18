@@ -4,12 +4,12 @@
 name: Java CI with Maven
 
 on:
-  workflow_dispatch:
-    branches: [ j15 ]
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ j15 ]
+#   push:
+#     branches: [ master ]
+#   pull_request:
+#     branches: [ master ]
 
 jobs:
   build:
