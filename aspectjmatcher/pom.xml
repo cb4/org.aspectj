@@ -58,10 +58,9 @@
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<!--
-					Set version manually in order to override version from super POM, e.g. 2.2-beta-5 from
+					Version set in aspectj-parent in order to override version from super POM, e.g. 2.2-beta-5 from
 					https://maven.apache.org/ref/3.6.3/maven-model-builder/super-pom
 				-->
-				<version>3.1.1</version>
 				<executions>
 					<execution>
 						<id>aspectjmatcher-assembly</id>

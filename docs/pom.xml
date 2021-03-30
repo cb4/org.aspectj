@@ -143,7 +143,6 @@
         <plugins>
           <plugin>
             <artifactId>maven-antrun-plugin</artifactId>
-            <version>3.0.0</version>
             <executions>
               <execution>
                 <id>make-docs</id>
