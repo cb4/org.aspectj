@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="build ModuleTest" type="JUnit" factoryName="JUnit">
+    <module name="build" />
+    <selectedOptions>
+      <option name="workingDirectory" />
+    </selectedOptions>
+    <option name="PACKAGE_NAME" value="org.aspectj.internal.build" />
+    <option name="MAIN_CLASS_NAME" value="" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="package" />
+    <option name="VM_PARAMETERS" value="-ea " />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/build/src/test/java/org/aspectj/internal" />
+    <option name="TEST_SEARCH_SCOPE">
+      <value defaultName="wholeProject" />
+    </option>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
