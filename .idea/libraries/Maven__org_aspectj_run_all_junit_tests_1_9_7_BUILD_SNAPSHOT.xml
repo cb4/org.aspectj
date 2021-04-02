@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.aspectj:run-all-junit-tests:1.9.7.BUILD-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/run-all-junit-tests/1.9.7.BUILD-SNAPSHOT/run-all-junit-tests-1.9.7.BUILD-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/run-all-junit-tests/1.9.7.BUILD-SNAPSHOT/run-all-junit-tests-1.9.7.BUILD-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/run-all-junit-tests/1.9.7.BUILD-SNAPSHOT/run-all-junit-tests-1.9.7.BUILD-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

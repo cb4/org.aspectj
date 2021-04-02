@@ -135,7 +135,7 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
-							<classifier>sources</classifier>
+<!--							<classifier>sources</classifier>-->
 							<finalName>aspectjweaver-${project.version}</finalName>
 							<archive>
 							</archive>

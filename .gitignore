@@ -1,36 +1,59 @@
+# When using a RAM disk to speed up development, see how-to in docs/developer/ram-disk/settings-ramdisk.xml
+/.mvn/maven.config
+/.mvn/settings-ramdisk.xml
+
 # Maven
 target/
 *.versionsBackup
 
-# Files + directories created during build
+# Files, directories created during build & test. Generated from all cvsignore files.
+/*/*.lst
+/*/*.ajsym
+/*/figures-coverage/*/*.class
+ajbrowser/testdata/bin
 aj-build/
-build/local.properties
+ajde/testdata/AspectJBuildManagerTest/bin
+ajde/testdata/StructureModelRegressionTest/bin
+ajde/testdata/StructureViewManagerTest/bin
+ajde/testdata/examples/bin
+ajde/testdata/examples/spacewar/bin
+ajde.core/testdata/BuildCancelling/bin
+ajdoc/testdata/bug82340/doc
+ajdoc/testdata/coverage/doc
+ajdoc/testdata/declareForms/doc
+ajdoc/testdata/patterns/doc
+docs/sandbox/aopalliance/bin
+docs/teaching/exercises/burn
+lib/jython/cachedir
+lib/jython/Lib/*$py.class
+org.aspectj.ajdt.core/testdata/src1/*~
+org.aspectj.ajdt.core/testdata/src1/*.class
+org.aspectj.ajdt.core/testdata/src1/p1
 taskdefs/bin
+tests/ajcore*
+tests/new/ajworkingdir
+tests/src/test/resources/org/aspectj/systemtest/ajc150/tests
 
 # Log files
 log.txt
 
+# Save project files for each IDE. TODO revisit once build is cleaned up.
+# Goal is clean imports into each IDE without including user-sepcfic settings.
 # Eclipse
 .classpath
-.project
-.settings
+#.project
+#.settings
 
 # IntelliJ IDEA
-*.iml
-.idea/
+workspace.iml
+#.idea/*
+#!.idea/runConfigurations
 
 # Visual Studio Code
-.vscode
+#.vscode
 
 # MacOS X Finder
 .DS_Store
 
 # Linux
 .attach_pid*
-
-# No idea where these come from
-bin/
-
-# When using a RAM disk to speed up development, see how-to in docs/developer/ram-disk/settings-ramdisk.xml
-/.mvn/maven.config
-/.mvn/settings-ramdisk.xml

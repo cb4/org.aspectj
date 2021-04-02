@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="1536" />
+    <option name="BUILD_PROCESS_ADDITIONAL_VM_OPTIONS" value="3096" />
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="testing-client" />
+        <module name="loadtime" />
+        <module name="org.eclipse.jdt.core" />
+        <module name="ajde" />
+        <module name="ajdoc" />
+        <module name="taskdefs" />
+        <module name="testing" />
+        <module name="testing-util" />
+        <module name="runtime" />
+        <module name="ajde.core" />
+        <module name="org.aspectj.ajdt.core" />
+        <module name="tests" />
+        <module name="util" />
+        <module name="docs" />
+        <module name="build" />
+        <module name="bcel-builder" />
+        <module name="ajbrowser" />
+        <module name="testing-drivers" />
+        <module name="org.aspectj.matcher" />
+        <module name="asm" />
+        <module name="bridge" />
+        <module name="weaver" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="11">
+      <module name="ajbrowser" target="1.8" />
+      <module name="ajde" target="1.8" />
+      <module name="ajde.core" target="1.8" />
+      <module name="ajdoc" target="1.8" />
+      <module name="asm" target="1.8" />
+      <module name="aspectj-parent" target="1.8" />
+      <module name="aspectjmatcher" target="1.8" />
+      <module name="aspectjrt" target="1.8" />
+      <module name="aspectjtools" target="1.8" />
+      <module name="aspectjweaver" target="1.8" />
+      <module name="bcel-builder" target="1.8" />
+      <module name="bridge" target="1.8" />
+      <module name="build" target="1.8" />
+      <module name="docs" target="1.8" />
+      <module name="installer" target="1.8" />
+      <module name="loadtime" target="1.8" />
+      <module name="org.aspectj.ajdt.core" target="1.8" />
+      <module name="org.aspectj.matcher" target="1.8" />
+      <module name="org.eclipse.jdt.core" target="1.8" />
+      <module name="run-all-junit-tests" target="1.8" />
+      <module name="runtime" target="1.8" />
+      <module name="taskdefs" target="1.8" />
+      <module name="testing" target="1.8" />
+      <module name="testing-client" target="1.8" />
+      <module name="testing-drivers" target="1.8" />
+      <module name="testing-util" target="1.8" />
+      <module name="tests" target="1.8" />
+      <module name="util" target="1.8" />
+      <module name="weaver" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
+  </component>
+</project>

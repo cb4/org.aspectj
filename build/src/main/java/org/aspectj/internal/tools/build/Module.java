@@ -34,12 +34,12 @@ import org.aspectj.internal.tools.build.Util.OSGIBundle.RequiredBundle;
 
 
 /**
- * This represents an (eclipse) build module/unit used by a Builder to compile
- * classes and/or assemble zip file of classes, optionally with all antecedants.
- * This implementation infers attributes from two files in the module directory:
+ * This represents an (eclipse) build module/unit used by a Builder to compile classes and/or
+ * assemble zip file of classes, optionally with all antecedents. This implementation infers
+ * attributes from two files in the module directory:
  * <ul>
  * <li>an Eclipse project <code>.classpath</code> file containing required
- * libraries and modules (collectively, "antecedants") </li>
+ * libraries and modules (collectively, "antecedents") </li>
  * <li>a file <code>{moduleName}.mf.txt</code> is taken as the manifest of
  * any .jar file produced, after filtering. </li>
  * </ul>
@@ -48,8 +48,7 @@ import org.aspectj.internal.tools.build.Util.OSGIBundle.RequiredBundle;
  * @see Modules#getModule(String)
  */
 public class Module {
-    private static final String[] ATTS = new String[] { "exported", "kind",
-            "path", "sourcepath" };
+    private static final String[] ATTS = new String[] {"exported", "kind", "path", "sourcepath"};
 
 //    private static final int getATTSIndex(String key) {
 //        for (int i = 0; i < ATTS.length; i++) {
@@ -58,69 +57,15 @@ public class Module {
 //        }
 //        return -1;
 //    }
-
+    public final boolean valid;
+    public final File moduleDir;
+    public final String name;
     /**
-     * @return true if file is null or cannot be read or was last modified after
-     *         time
+     * reference back to collection for creating required modules
      */
-    private static boolean outOfDate(long time, File file) {
-        return ((null == file) || !file.canRead() || (file.lastModified() > time));
-    }
-
-    /** @return all source files under srcDir */
-    private static Iterator<File> sourceFiles(File srcDir) {
-        List<File> result = new ArrayList<>();
-        sourceFiles(srcDir, result);
-        return result.iterator();
-    }
-
-    private static void sourceFiles(File srcDir, List<File> result) {
-        if ((null == srcDir) || !srcDir.canRead() || !srcDir.isDirectory()) {
-            return;
-        }
-        File[] files = srcDir.listFiles();
-		for (File file : files) {
-			if (file.isDirectory()) {
-				sourceFiles(file, result);
-			} else if (isSourceFile(file)) {
-				result.add(file);
-			}
-		}
-    }
-
-    private static void addIfNew(List<File> source, List<File> sink) {
-    		for (File item: source) {
-            if (!sink.contains(item)) {
-                sink.add(item);
-            }
-        }
-    }
-
-    /**
-     * Recursively find antecedant jars.
-     *
-     * @see findKnownJarAntecedants()
-     */
-     static void doFindJarRequirements(Result result, List<File> known) {
-        Util.iaxIfNull(result, "result");
-        Util.iaxIfNull(known, "known");
-        addIfNew(result.getLibJars(), known);
-        addIfNew(result.getExportedLibJars(), known);
-        Result[] reqs = result.getRequired();
-		 for (Result requiredResult : reqs) {
-			 File requiredJar = requiredResult.getOutputFile();
-			 if (!known.contains(requiredJar)) {
-				 known.add(requiredJar);
-				 doFindJarRequirements(requiredResult, known);
-			 }
-		 }
-    }
-
-    /** @return true if this is a source file */
-    private static boolean isSourceFile(File file) {
-        String path = file.getPath();
-        return (path.endsWith(".java") || path.endsWith(".aj")); // XXXFileLiteral
-    }
+    private final Modules modules;
+    private final Result release;
+    private final Result test;
 
 //    /** @return List of File of any module or library jar ending with suffix */
 //    private static ArrayList findJarsBySuffix(String suffix, Kind kind,
@@ -146,53 +91,42 @@ public class Module {
 //        }
 //        return result;
 //    }
-
-    public final boolean valid;
-
-    public final File moduleDir;
-
-    public final String name;
-
-    /** reference back to collection for creating required modules */
-    private final Modules modules;
-
-    private final Result release;
-
-    private final Result test;
-
     private final Result testAll;
-
     private final Result releaseAll;
-
-    /** path to output jar - may not exist */
-    private final File moduleJar;
-
-    /** File list of library jars */
-    private final List<File> libJars;
-
-    /** List of classpath variables */
-    private final List<String> classpathVariables;
-
     /**
-     * List of library jars exported to clients (duplicates some libJars
-     * entries)
+     * path to output jar - may not exist
+     */
+    private final File moduleJar;
+    /**
+     * File list of library jars
+     */
+    private final List<File> libJars;
+    /**
+     * List of classpath variables
+     */
+    private final List<String> classpathVariables;
+    /**
+     * List of library jars exported to clients (duplicates some libJars entries)
      */
     private final List<File> exportedLibJars;
-
-    /** File list of source directories */
+    /**
+     * File list of source directories
+     */
     private final List<File> srcDirs;
-
-    /** properties from the modules {name}.properties file */
+    /**
+     * properties from the modules {name}.properties file
+     */
     private final Properties properties;
-
-    /** List of required modules */
+    /**
+     * List of required modules
+     */
     private final List<Module> requiredModules;
-
-    /** logger */
+    /**
+     * logger
+     */
     private final Messager messager;
 
-    Module(File moduleDir, File jarDir, String name, Modules modules,
-            Messager messager) {
+    Module(File moduleDir, File jarDir, String name, Modules modules, Messager messager) {
         Util.iaxIfNotCanReadDir(moduleDir, "moduleDir");
         Util.iaxIfNotCanReadDir(jarDir, "jarDir");
         Util.iaxIfNull(name, "name");
@@ -215,20 +149,342 @@ public class Module {
         valid = init();
     }
 
-
-    /** @return Modules registry of known modules, including this one */
-    public Modules getModules() {
-        return modules;
+    private boolean init() {
+        boolean cp = initClasspath();
+        boolean mf = initManifest();
+        if (!cp && !mf) {
+            return false;
+        }
+        return initProperties() && reviewInit() && initResults();
     }
 
     /**
-     * @param kind
-     *            the Kind of the result to recalculate
-     * @param recalculate
-     *            if true, then force recalculation
-     * @return true if the target jar for this module is older than any source
-     *         files in a source directory or any required modules or any
-     *         libraries or if any libraries or required modules are missing
+     * read eclipse .classpath file XXX line-oriented hack
+     */
+    private boolean initClasspath() {
+        // meaning testsrc directory, junit library, etc.
+        File file = new File(moduleDir, ".classpath"); // XXXFileLiteral
+        if (!file.exists()) {
+            return false; // OSGI???
+        }
+        FileReader fin = null;
+        try {
+            fin = new FileReader(file);
+            BufferedReader reader = new BufferedReader(fin);
+            String line;
+            XMLItem item = new XMLItem("classpathentry", new ICB());
+            while (null != (line = reader.readLine())) {
+                line = line.trim();
+                // dumb - only handle comment-only lines
+                if (!line.startsWith("<?xml") && !line.startsWith("<!--")) {
+                    item.acceptLine(line);
+                }
+            }
+            return (0 < (srcDirs.size() + libJars.size()));
+        }
+        catch (IOException e) {
+            messager.logException("IOException reading " + file, e);
+        }
+        finally {
+            if (null != fin) {
+                try {
+                    fin.close();
+                }
+                catch (IOException e) {
+                } // ignore
+            }
+        }
+        return false;
+    }
+
+    /**
+     * read OSGI manifest.mf file XXX hacked
+     */
+    private boolean initManifest() {
+        File metaInf = new File(moduleDir, "META-INF");
+        if (!metaInf.canRead() || !metaInf.isDirectory()) {
+            return false;
+        }
+        File file = new File(metaInf, "MANIFEST.MF"); // XXXFileLiteral
+        if (!file.exists()) {
+            return false; // ok, not OSGI
+        }
+        InputStream fin = null;
+        OSGIBundle bundle = null;
+        try {
+            fin = new FileInputStream(file);
+            bundle = new OSGIBundle(fin);
+        }
+        catch (IOException e) {
+            messager.logException("IOException reading " + file, e);
+            return false;
+        }
+        finally {
+            Util.closeSilently(fin);
+        }
+        RequiredBundle[] bundles = bundle.getRequiredBundles();
+        for (RequiredBundle required : bundles) {
+            update("src", "/" + required.name, required.text, false);
+        }
+        String[] libs = bundle.getClasspath();
+        for (String lib : libs) {
+            update("lib", lib, lib, false);
+        }
+
+        return true;
+    }
+
+    /**
+     * @return true if any properties were read correctly
+     */
+    private boolean initProperties() {
+        File file = new File(moduleDir, name + ".properties"); // XXXFileLiteral
+        if (!Util.canReadFile(file)) {
+            return true; // no properties to read
+        }
+        FileInputStream fin = null;
+        try {
+            fin = new FileInputStream(file);
+            properties.load(fin);
+            return true;
+        }
+        catch (IOException e) {
+            messager.logException("IOException reading " + file, e);
+            return false;
+        }
+        finally {
+            if (null != fin) {
+                try {
+                    fin.close();
+                }
+                catch (IOException e) {
+                } // ignore
+            }
+        }
+    }
+
+    /**
+     * Post-process initialization. This implementation trims java5 source dirs if not running in a
+     * Java 5 VM.
+     *
+     * @return true if initialization post-processing worked
+     */
+    protected boolean reviewInit() {
+        try {
+            for (ListIterator<File> iter = srcDirs.listIterator(); iter.hasNext(); ) {
+                File srcDir = iter.next();
+                String lcname = srcDir.getName().toLowerCase();
+                if (!Util.JAVA5_VM && (Util.Constants.JAVA5_SRC.equals(lcname) ||
+                                       Util.Constants.JAVA5_TESTSRC.equals(lcname))) {
+                    // assume optional for pre-1.5 builds
+                    iter.remove();
+                }
+            }
+        }
+        catch (UnsupportedOperationException e) {
+            return false; // failed XXX log also if verbose
+        }
+        return true;
+    }
+
+    /**
+     * After reviewInit, setup four kinds of results.
+     */
+    protected boolean initResults() {
+        return true; // results initialized lazily
+    }
+
+    private boolean update(String kind, String path, String toString, boolean exported) {
+        String libPath = null;
+        if ("src".equals(kind)) {
+            if (path.startsWith("/")) { // module
+                String moduleName = path.substring(1);
+                Module req = modules.getModule(moduleName);
+                if (null != req) {
+                    requiredModules.add(req);
+                    return true;
+                }
+                else {
+                    messager.error("update unable to create required module: " + moduleName);
+                }
+            }
+            else { // src dir
+                String fullPath = getFullPath(path);
+                File srcDir = new File(fullPath);
+                if (srcDir.canRead() && srcDir.isDirectory()) {
+                    srcDirs.add(srcDir);
+                    return true;
+                }
+                else {
+                    messager.error("not a src dir: " + srcDir);
+                }
+            }
+        }
+        else if ("lib".equals(kind)) {
+            libPath = path;
+        }
+        else if ("var".equals(kind)) {
+            final String JAVA_HOME = "JAVA_HOME/";
+            if (path.startsWith(JAVA_HOME)) {
+                path = path.substring(JAVA_HOME.length());
+                String home = System.getProperty("java.home");
+                if (null != home) {
+                    libPath = Util.path(home, path);
+                    File f = new File(libPath);
+                    if (!f.exists() && home.endsWith("jre")) {
+                        f = new File(home).getParentFile();
+                        libPath = Util.path(f.getPath(), path);
+                    }
+                }
+            }
+            if (null == libPath) {
+                warnVariable(path, toString);
+                classpathVariables.add(path);
+            }
+        }
+        else if ("con".equals(kind)) {
+            // 'special' for container pointing at AspectJ runtime...
+            if (path.equals("org.eclipse.ajdt.core.ASPECTJRT_CONTAINER")) {
+                classpathVariables.add("ASPECTJRT_LIB");
+            }
+            else {
+                if (!path.contains("JRE")) { // warn non-JRE containers
+                    messager.log("cannot handle con yet: " + toString);
+                }
+            }
+        }
+        else if ("out".equals(kind) || "output".equals(kind)) {
+            // ignore output entries
+        }
+        else {
+            messager.log("unrecognized kind " + kind + " in " + toString);
+        }
+        if (null != libPath) {
+            File libJar = new File(libPath);
+            if (!libJar.exists()) {
+                libJar = new File(getFullPath(libPath));
+            }
+            if (libJar.canRead() && libJar.isFile()) {
+                libJars.add(libJar);
+                if (exported) {
+                    exportedLibJars.add(libJar);
+                }
+                return true;
+            }
+            else {
+                messager.error("no such library jar " + libJar + " from " + toString);
+            }
+        }
+        return false;
+    }
+
+    /**
+     * resolve path absolutely, assuming / means base of modules dir
+     */
+    public String getFullPath(String path) {
+        String fullPath;
+        if (path.startsWith("/")) {
+            fullPath = modules.baseDir.getAbsolutePath() + path;
+        }
+        else {
+            fullPath = moduleDir.getAbsolutePath() + "/" + path;
+        }
+        // check for absolute paths (untested - none in our modules so far)
+        File testFile = new File(fullPath);
+        // System.out.println("Module.getFullPath: " + fullPath + " - " +
+        // testFile.getAbsolutePath());
+        if (!testFile.exists()) {
+            testFile = new File(path);
+            if (testFile.exists() && testFile.isAbsolute()) {
+                fullPath = path;
+            }
+        }
+        return fullPath;
+    }
+
+    private void warnVariable(String path, String toString) {
+        String[] known = {"JRE_LIB", "ASPECTJRT_LIB", "JRE15_LIB"};
+        for (String s : known) {
+            if (s.equals(path)) {
+                return;
+            }
+        }
+        messager.log("Module cannot handle var yet: " + toString);
+    }
+
+    /**
+     * @return true if file is null or cannot be read or was last modified after time
+     */
+    private static boolean outOfDate(long time, File file) {
+        return ((null == file) || !file.canRead() || (file.lastModified() > time));
+    }
+
+    /**
+     * @return all source files under srcDir
+     */
+    private static Iterator<File> sourceFiles(File srcDir) {
+        List<File> result = new ArrayList<>();
+        sourceFiles(srcDir, result);
+        return result.iterator();
+    }
+
+    private static void sourceFiles(File srcDir, List<File> result) {
+        if ((null == srcDir) || !srcDir.canRead() || !srcDir.isDirectory()) {
+            return;
+        }
+        File[] files = srcDir.listFiles();
+        for (File file : files) {
+            if (file.isDirectory()) {
+                sourceFiles(file, result);
+            }
+            else if (isSourceFile(file)) {
+                result.add(file);
+            }
+        }
+    }
+
+    private static void addIfNew(List<File> source, List<File> sink) {
+        for (File item : source) {
+            if (!sink.contains(item)) {
+                sink.add(item);
+            }
+        }
+    }
+
+    /**
+     * Recursively find antecedent jars.
+     *
+     * @see findKnownJarAntecedants()
+     */
+    static void doFindJarRequirements(Result result, List<File> known) {
+        Util.iaxIfNull(result, "result");
+        Util.iaxIfNull(known, "known");
+        addIfNew(result.getLibJars(), known);
+        addIfNew(result.getExportedLibJars(), known);
+        Result[] reqs = result.getRequired();
+        for (Result requiredResult : reqs) {
+            File requiredJar = requiredResult.getOutputFile();
+            if (!known.contains(requiredJar)) {
+                known.add(requiredJar);
+                doFindJarRequirements(requiredResult, known);
+            }
+        }
+    }
+
+    /**
+     * @return true if this is a source file
+     */
+    private static boolean isSourceFile(File file) {
+        String path = file.getPath();
+        return (path.endsWith(".java") || path.endsWith(".aj")); // XXXFileLiteral
+    }
+
+    /**
+     * @param kind the Kind of the result to recalculate
+     * @param recalculate if true, then force recalculation
+     * @return true if the target jar for this module is older than any source files in a source
+     *         directory or any required modules or any libraries or if any libraries or required
+     *         modules are missing
      */
     public static boolean outOfDate(Result result) {
         File outputFile = result.getOutputFile();
@@ -237,52 +493,70 @@ public class Module {
         }
         final long time = outputFile.lastModified();
         File file;
-		for (File srcDir : result.getSrcDirs()) {
-			for (Iterator<File> srcFiles = sourceFiles(srcDir); srcFiles.hasNext(); ) {
-				file = srcFiles.next();
-				if (outOfDate(time, file)) {
-					return true;
-				}
-			}
-		}
+        for (File srcDir : result.getSrcDirs()) {
+            for (Iterator<File> srcFiles = sourceFiles(srcDir); srcFiles.hasNext(); ) {
+                file = srcFiles.next();
+                if (outOfDate(time, file)) {
+                    return true;
+                }
+            }
+        }
         // required modules
         Result[] reqs = result.getRequired();
-		for (Result requiredResult : reqs) {
-			file = requiredResult.getOutputFile();
-			if (outOfDate(time, file)) {
-				return true;
-			}
-		}
+        for (Result requiredResult : reqs) {
+            file = requiredResult.getOutputFile();
+            if (outOfDate(time, file)) {
+                return true;
+            }
+        }
         // libraries
-		for (File value : result.getLibJars()) {
-			file = value;
-			if (outOfDate(time, file)) {
-				return true;
-			}
-		}
+        for (File value : result.getLibJars()) {
+            file = value;
+            if (outOfDate(time, file)) {
+                return true;
+            }
+        }
         return false;
     }
 
-
+    /**
+     * @return Modules registry of known modules, including this one
+     */
+    public Modules getModules() {
+        return modules;
+    }
 
     public String toString() {
         return name;
     }
 
     public String toLongString() {
-        return "Module [name=" + name + ", srcDirs=" + srcDirs + ", required="
-                + requiredModules + ", moduleJar=" + moduleJar + ", libJars="
-                + libJars + "]";
+        return "Module [name=" + name + ", srcDirs=" + srcDirs + ", required=" + requiredModules +
+               ", moduleJar=" + moduleJar + ", libJars=" + libJars + "]";
     }
 
     public Result getResult(Kind kind) {
-        return kind.assemble ? (kind.normal ? releaseAll : testAll)
-                : (kind.normal ? release : test);
+        return kind.assemble ? (kind.normal ? releaseAll : testAll) : (kind.normal ? release :
+                                                                       test);
     }
+
+//    private boolean update(String toString, String[] attributes) {
+//        String kind = attributes[getATTSIndex("kind")];
+//        String path = attributes[getATTSIndex("path")];
+//        String exp = attributes[getATTSIndex("exported")];
+//        boolean exported = ("true".equals(exp));
+//        return update(kind, path, toString, exported);
+//    }
 
     List<File> srcDirs(Result result) {
         myResult(result);
         return srcDirs;
+    }
+
+    private void myResult(Result result) {
+        if ((null == result) || this != result.getModule()) {
+            throw new IllegalArgumentException("not my result: " + result + ": " + this);
+        }
     }
 
     List<File> libJars(Result result) {
@@ -305,289 +579,14 @@ public class Module {
         return requiredModules;
     }
 
-    private void myResult(Result result) {
-        if ((null == result) || this != result.getModule()) {
-            throw new IllegalArgumentException("not my result: " + result + ": " + this);
-        }
-    }
-
-    private boolean init() {
-        boolean cp = initClasspath();
-        boolean mf = initManifest();
-        if (!cp && !mf) {
-            return false;
-        }
-        return initProperties() && reviewInit() && initResults();
-    }
-
-    /** read OSGI manifest.mf file XXX hacked */
-    private boolean initManifest() {
-        File metaInf = new File(moduleDir, "META-INF");
-        if (!metaInf.canRead() || !metaInf.isDirectory()) {
-            return false;
-        }
-        File file = new File(metaInf, "MANIFEST.MF"); // XXXFileLiteral
-        if (!file.exists()) {
-            return false; // ok, not OSGI
-        }
-        InputStream fin = null;
-        OSGIBundle bundle = null;
-        try {
-            fin = new FileInputStream(file);
-            bundle = new OSGIBundle(fin);
-        } catch (IOException e) {
-            messager.logException("IOException reading " + file, e);
-            return false;
-        } finally {
-            Util.closeSilently(fin);
-        }
-        RequiredBundle[] bundles = bundle.getRequiredBundles();
-		for (RequiredBundle required : bundles) {
-			update("src", "/" + required.name, required.text, false);
-		}
-        String[] libs = bundle.getClasspath();
-		for (String lib : libs) {
-			update("lib", lib, lib, false);
-		}
-
-        return true;
-    }
-
-    /** read eclipse .classpath file XXX line-oriented hack */
-    private boolean initClasspath() {
-        // meaning testsrc directory, junit library, etc.
-        File file = new File(moduleDir, ".classpath"); // XXXFileLiteral
-        if (!file.exists()) {
-            return false; // OSGI???
-        }
-        FileReader fin = null;
-        try {
-            fin = new FileReader(file);
-            BufferedReader reader = new BufferedReader(fin);
-            String line;
-            XMLItem item = new XMLItem("classpathentry", new ICB());
-            while (null != (line = reader.readLine())) {
-                line = line.trim();
-                // dumb - only handle comment-only lines
-                if (!line.startsWith("<?xml") && !line.startsWith("<!--")) {
-                    item.acceptLine(line);
-                }
-            }
-            return (0 < (srcDirs.size() + libJars.size()));
-        } catch (IOException e) {
-            messager.logException("IOException reading " + file, e);
-        } finally {
-            if (null != fin) {
-                try {
-                    fin.close();
-                } catch (IOException e) {
-                } // ignore
-            }
-        }
-        return false;
-    }
-
-//    private boolean update(String toString, String[] attributes) {
-//        String kind = attributes[getATTSIndex("kind")];
-//        String path = attributes[getATTSIndex("path")];
-//        String exp = attributes[getATTSIndex("exported")];
-//        boolean exported = ("true".equals(exp));
-//        return update(kind, path, toString, exported);
-//    }
-
-    private boolean update(String kind, String path, String toString,
-            boolean exported) {
-        String libPath = null;
-        if ("src".equals(kind)) {
-            if (path.startsWith("/")) { // module
-                String moduleName = path.substring(1);
-                Module req = modules.getModule(moduleName);
-                if (null != req) {
-                    requiredModules.add(req);
-                    return true;
-                } else {
-                    messager.error("update unable to create required module: "
-                            + moduleName);
-                }
-            } else { // src dir
-                String fullPath = getFullPath(path);
-                File srcDir = new File(fullPath);
-                if (srcDir.canRead() && srcDir.isDirectory()) {
-                    srcDirs.add(srcDir);
-                    return true;
-                } else {
-                    messager.error("not a src dir: " + srcDir);
-                }
-            }
-        } else if ("lib".equals(kind)) {
-            libPath = path;
-        } else if ("var".equals(kind)) {
-            final String JAVA_HOME = "JAVA_HOME/";
-            if (path.startsWith(JAVA_HOME)) {
-                path = path.substring(JAVA_HOME.length());
-                String home = System.getProperty("java.home");
-                if (null != home) {
-                    libPath = Util.path(home, path);
-                    File f = new File(libPath);
-                    if (!f.exists() && home.endsWith("jre")) {
-                        f = new File(home).getParentFile();
-                        libPath = Util.path(f.getPath(), path);
-                    }
-                }
-            }
-            if (null == libPath) {
-                warnVariable(path, toString);
-                classpathVariables.add(path);
-            }
-        } else if ("con".equals(kind)) {
-        	// 'special' for container pointing at AspectJ runtime...
-        	if (path.equals("org.eclipse.ajdt.core.ASPECTJRT_CONTAINER")) {
-        		classpathVariables.add("ASPECTJRT_LIB");
-        	} else {
-	            if (!path.contains("JRE")) { // warn non-JRE containers
-	                messager.log("cannot handle con yet: " + toString);
-	            }
-        	}
-        } else if ("out".equals(kind) || "output".equals(kind)) {
-            // ignore output entries
-        } else {
-            messager.log("unrecognized kind " + kind + " in " + toString);
-        }
-        if (null != libPath) {
-            File libJar = new File(libPath);
-            if (!libJar.exists()) {
-                libJar = new File(getFullPath(libPath));
-            }
-            if (libJar.canRead() && libJar.isFile()) {
-                libJars.add(libJar);
-                if (exported) {
-                    exportedLibJars.add(libJar);
-                }
-                return true;
-            } else {
-                messager.error("no such library jar " + libJar + " from "
-                        + toString);
-            }
-        }
-        return false;
-    }
-
-    private void warnVariable(String path, String toString) {
-        String[] known = { "JRE_LIB", "ASPECTJRT_LIB", "JRE15_LIB" };
-		for (String s : known) {
-			if (s.equals(path)) {
-				return;
-			}
-		}
-        messager.log("Module cannot handle var yet: " + toString);
-    }
-
-    /** @return true if any properties were read correctly */
-    private boolean initProperties() {
-        File file = new File(moduleDir, name + ".properties"); // XXXFileLiteral
-        if (!Util.canReadFile(file)) {
-            return true; // no properties to read
-        }
-        FileInputStream fin = null;
-        try {
-            fin = new FileInputStream(file);
-            properties.load(fin);
-            return true;
-        } catch (IOException e) {
-            messager.logException("IOException reading " + file, e);
-            return false;
-        } finally {
-            if (null != fin) {
-                try {
-                    fin.close();
-                } catch (IOException e) {
-                } // ignore
-            }
-        }
-    }
-
-    /**
-     * Post-process initialization. This implementation trims java5 source dirs
-     * if not running in a Java 5 VM.
-     * @return true if initialization post-processing worked
-     */
-    protected boolean reviewInit() {
-        try {
-            for (ListIterator<File> iter = srcDirs.listIterator(); iter.hasNext();) {
-                File srcDir = iter.next();
-                String lcname = srcDir.getName().toLowerCase();
-                if (!Util.JAVA5_VM
-                        && (Util.Constants.JAVA5_SRC.equals(lcname) || Util.Constants.JAVA5_TESTSRC
-                                .equals(lcname))) {
-                    // assume optional for pre-1.5 builds
-                    iter.remove();
-                }
-            }
-        } catch (UnsupportedOperationException e) {
-            return false; // failed XXX log also if verbose
-        }
-        return true;
-    }
-
-    /**
-     * After reviewInit, setup four kinds of results.
-     */
-    protected boolean initResults() {
-        return true; // results initialized lazily
-    }
-
-    /** resolve path absolutely, assuming / means base of modules dir */
-    public String getFullPath(String path) {
-        String fullPath;
-        if (path.startsWith("/")) {
-            fullPath = modules.baseDir.getAbsolutePath() + path;
-        } else {
-            fullPath = moduleDir.getAbsolutePath() + "/" + path;
-        }
-        // check for absolute paths (untested - none in our modules so far)
-        File testFile = new File(fullPath);
-        // System.out.println("Module.getFullPath: " + fullPath + " - " +
-        // testFile.getAbsolutePath());
-        if (!testFile.exists()) {
-            testFile = new File(path);
-            if (testFile.exists() && testFile.isAbsolute()) {
-                fullPath = path;
-            }
-        }
-        return fullPath;
-    }
-
-    class ICB implements XMLItem.ICallback {
-        public void end(Properties attributes) {
-            String kind = attributes.getProperty("kind");
-            String path = attributes.getProperty("path");
-            String exp = attributes.getProperty("exported");
-            boolean exported = ("true".equals(exp));
-            ByteArrayOutputStream bout = new ByteArrayOutputStream();
-            attributes.list(new PrintStream(bout));
-            update(kind, path, bout.toString(), exported);
-        }
-    }
-
     public static class XMLItem {
-        public interface ICallback {
-            void end(Properties attributes);
-        }
-
         static final String START_NAME = "classpathentry";
-
         static final String ATT_STARTED = "STARTED";
-
         final ICallback callback;
-
         final StringBuffer input = new StringBuffer();
-
         final String[] attributes = new String[ATTS.length];
-
         final String targetEntity;
-
         String entityName;
-
         String attributeName;
 
         XMLItem(String targetEntity, ICallback callback) {
@@ -606,6 +605,13 @@ public class Module {
             attributeName = null;
         }
 
+        public void acceptLine(String line) {
+            String[] tokens = tokenize(line);
+            for (String token : tokens) {
+                next(token);
+            }
+        }
+
         String[] tokenize(String line) {
             final String DELIM = " \n\t\\<>\"=";
             StringTokenizer st = new StringTokenizer(line, DELIM, true);
@@ -621,17 +627,21 @@ public class Module {
                             quote.append("\"");
                             result.add(quote.toString());
                             quote.setLength(0);
-                        } else {
+                        }
+                        else {
                             quote.append("\"");
                             inQuote = true;
                         }
-                    } else {
+                    }
+                    else {
                         result.add(s);
                     }
-                } else { // not a delimiter
+                }
+                else { // not a delimiter
                     if (inQuote) {
                         quote.append(s);
-                    } else {
+                    }
+                    else {
                         result.add(s);
                     }
                 }
@@ -639,22 +649,57 @@ public class Module {
             return result.toArray(new String[0]);
         }
 
-        public void acceptLine(String line) {
-            String[] tokens = tokenize(line);
-			for (String token : tokens) {
-				next(token);
-			}
-        }
-
-        private Properties attributesToProperties() {
-            Properties result = new Properties();
-            for (int i = 0; i < attributes.length; i++) {
-                String a = attributes[i];
-                if (null != a) {
-                    result.setProperty(ATTS[i], a);
+        /**
+         * Assumes that comments and "<?xml"-style lines are removed.
+         */
+        public void next(String s) {
+            if ((null == s) || (0 == s.length())) {
+                return;
+            }
+            input.append(s);
+            s = s.trim();
+            if (0 == s.length()) {
+                return;
+            }
+            if ("<".equals(s)) {
+                errorIfNotNull("entityName", entityName);
+                errorIfNotNull("attributeName", attributeName);
+            }
+            else if (">".equals(s)) {
+                errorIfNull("entityName", entityName);
+                if ("/".equals(attributeName)) {
+                    attributeName = null;
+                }
+                else {
+                    errorIfNotNull("attributeName", attributeName);
+                }
+                if (activeEntity()) {
+                    callback.end(attributesToProperties());
+                }
+                entityName = null;
+            }
+            else if ("=".equals(s)) {
+                errorIfNull("entityName", entityName);
+                errorIfNull("attributeName", attributeName);
+            }
+            else if (s.startsWith("\"")) {
+                errorIfNull("entityName", entityName);
+                errorIfNull("attributeName", attributeName);
+                writeAttribute(attributeName, s);
+                attributeName = null;
+            }
+            else {
+                if (null == entityName) {
+                    reset();
+                    entityName = s;
+                }
+                else if (null == attributeName) {
+                    attributeName = s;
+                }
+                else {
+                    System.out.println("unknown state - not value, attribute, or entity: " + s);
                 }
             }
-            return result;
         }
 
         void errorIfNotNull(String name, String value) {
@@ -673,61 +718,15 @@ public class Module {
             return targetEntity.equals(entityName);
         }
 
-        /**
-         * Assumes that comments and "<?xml"-style lines are removed.
-         */
-        public void next(String s) {
-            if ((null == s) || (0 == s.length())) {
-                return;
-            }
-            input.append(s);
-            s = s.trim();
-            if (0 == s.length()) {
-                return;
-            }
-            if ("<".equals(s)) {
-                errorIfNotNull("entityName", entityName);
-                errorIfNotNull("attributeName", attributeName);
-            } else if (">".equals(s)) {
-                errorIfNull("entityName", entityName);
-                if ("/".equals(attributeName)) {
-                    attributeName = null;
-                } else {
-                    errorIfNotNull("attributeName", attributeName);
-                }
-                if (activeEntity()) {
-                    callback.end(attributesToProperties());
-                }
-                entityName = null;
-            } else if ("=".equals(s)) {
-                errorIfNull("entityName", entityName);
-                errorIfNull("attributeName", attributeName);
-            } else if (s.startsWith("\"")) {
-                errorIfNull("entityName", entityName);
-                errorIfNull("attributeName", attributeName);
-                writeAttribute(attributeName, s);
-                attributeName = null;
-            } else {
-                if (null == entityName) {
-                    reset();
-                    entityName = s;
-                } else if (null == attributeName) {
-                    attributeName = s;
-                } else {
-                    System.out
-                            .println("unknown state - not value, attribute, or entity: "
-                                    + s);
+        private Properties attributesToProperties() {
+            Properties result = new Properties();
+            for (int i = 0; i < attributes.length; i++) {
+                String a = attributes[i];
+                if (null != a) {
+                    result.setProperty(ATTS[i], a);
                 }
             }
-        }
-
-        void readAttribute(String s) {
-            for (int i = 0; i < ATTS.length; i++) {
-                if (s.equals(ATTS[i])) {
-                    attributes[i] = ATT_STARTED;
-                    break;
-                }
-            }
+            return result;
         }
 
         void writeAttribute(String name, String value) {
@@ -745,6 +744,31 @@ public class Module {
 
         void error(String s) {
             throw new Error(s + " at input " + input);
+        }
+
+        void readAttribute(String s) {
+            for (int i = 0; i < ATTS.length; i++) {
+                if (s.equals(ATTS[i])) {
+                    attributes[i] = ATT_STARTED;
+                    break;
+                }
+            }
+        }
+
+        public interface ICallback {
+            void end(Properties attributes);
+        }
+    }
+
+    class ICB implements XMLItem.ICallback {
+        public void end(Properties attributes) {
+            String kind = attributes.getProperty("kind");
+            String path = attributes.getProperty("path");
+            String exp = attributes.getProperty("exported");
+            boolean exported = ("true".equals(exp));
+            ByteArrayOutputStream bout = new ByteArrayOutputStream();
+            attributes.list(new PrintStream(bout));
+            update(kind, path, bout.toString(), exported);
         }
     }
 }

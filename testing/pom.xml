@@ -92,12 +92,48 @@
       <systemPath>${project.basedir}/../lib/jdiff/jdiff.jar</systemPath>
     </dependency>
     <dependency>
+      <groupId>org.apache.ant</groupId>
+      <artifactId>ant</artifactId>
+      <version>1.10.9</version>
+    </dependency>
+<!--
+    <dependency>
       <groupId>ant</groupId>
       <artifactId>ant</artifactId>
       <version>1.0</version>
       <scope>system</scope>
       <systemPath>${project.basedir}/../lib/ant/lib/ant.jar</systemPath>
     </dependency>
+-->
+    <!-- commons.jar goes to these three: beanutils, digester, logging
+     <dependency>
+         <groupId>commons</groupId>
+         <artifactId>commons</artifactId>
+         <version>1.0</version>
+         <scope>system</scope>
+         <systemPath>${project.basedir}/../lib/commons/commons.jar</systemPath>
+     </dependency> -->
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.9.4</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-digester</groupId>
+      <artifactId>commons-digester</artifactId>
+      <version>2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>jakarta-regexp</groupId>
+      <artifactId>jakarta-regexp</artifactId>
+      <version>1.4</version>
+    </dependency>
+<!--
     <dependency>
       <groupId>jakarta-regexp</groupId>
       <artifactId>jakarta-regexp</artifactId>
@@ -105,6 +141,7 @@
       <scope>system</scope>
       <systemPath>${project.basedir}/../lib/regexp/jakarta-regexp-1.2.jar</systemPath>
     </dependency>
+-->
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>ajde.core</artifactId>
@@ -117,6 +154,7 @@
       <version>${project.version}</version>
       <type>test-jar</type>
     </dependency>
+<!--
     <dependency>
       <groupId>xercesImpl</groupId>
       <artifactId>xercesImpl</artifactId>
@@ -131,17 +169,11 @@
       <scope>system</scope>
       <systemPath>${project.basedir}/../lib/ant/lib/xml-apis.jar</systemPath>
     </dependency>
+-->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13</version>
-    </dependency>
-    <dependency>
-      <groupId>commons</groupId>
-      <artifactId>commons</artifactId>
-      <version>1.0</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/../lib/commons/commons.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.aspectj</groupId>
@@ -168,3 +200,4 @@
     </plugins>
   </build>
 </project>
+

@@ -1,15 +1,15 @@
 /* *******************************************************************
- * Copyright (c) 1999-2001 Xerox Corporation, 
+ * Copyright (c) 1999-2001 Xerox Corporation,
  *               2002 Palo Alto Research Center, Incorporated (PARC),
  *               2005-2006 Contributors.
- * All rights reserved. 
- * This program and the accompanying materials are made available 
- * under the terms of the Eclipse Public License v1.0 
- * which accompanies this distribution and is available at 
- * http://www.eclipse.org/legal/epl-v10.html 
- *  
- * Contributors: 
- *     Xerox/PARC     initial implementation 
+ * All rights reserved.
+ * This program and the accompanying materials are made available
+ * under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Xerox/PARC     initial implementation
  *     Wes Isberg     build tests
  * ******************************************************************/
 package org.aspectj.internal.build;
@@ -36,56 +36,84 @@ import org.aspectj.internal.tools.build.Result;
 import org.aspectj.internal.tools.build.Util;
 import org.aspectj.internal.tools.build.Result.Kind;
 
+
 public class ModulesTest extends TestCase {
-	
+
     public static final List<String> MODULE_NAMES;
-    
+
     private static final File BASE_DIR = new File("..");
-    
+
     static {
-        String[] names = {
-        "ajbrowser", "ajde", "ajdoc", "asm",
-        "bridge", "loadtime", "org.aspectj.ajdt.core",
-        "runtime", "taskdefs", "testing-client", "testing-util",
-        "tests", "util", "weaver"};
+        String[] names =
+                {"ajbrowser", "ajde", "ajdoc", "asm", "bridge", "loadtime", "org.aspectj.ajdt.core",
+                        "runtime", "taskdefs", "testing-client", "testing-util", "tests", "util",
+                        "weaver"};
         List<String> list = Arrays.asList(names);
         MODULE_NAMES = Collections.unmodifiableList(list);
     }
 
-   private static boolean delete(File file) { // XXX Util
+    List<File> tempFiles = new ArrayList<>();
+
+    public ModulesTest(String name) {
+        super(name);
+    }
+
+    private static boolean delete(File file) { // XXX Util
         if ((null == file) || !file.exists()) {
             return true;
         }
         if (file.isFile()) {
             return file.delete();
-        } else {
+        }
+        else {
             File[] files = file.listFiles();
             boolean result = true;
-			for (File value : files) {
-				if (!ModulesTest.delete(value)
-						&& result) {
-					result = false;
-				}
-			}
+            for (File value : files) {
+                if (!ModulesTest.delete(value) && result) {
+                    result = false;
+                }
+            }
             return (file.delete() && result);
         }
     }
 
-    List<File> tempFiles = new ArrayList<>();
-     
-	public ModulesTest(String name) {
-		super(name);
-	}
+    protected void tearDown() throws Exception {
+        super.tearDown();
+        for (File file : tempFiles) {
+            if (!ModulesTest.delete(file)) {
+                System.err.println("warning: ModulesTest unable to delete " + file);
+            }
+        }
+    }
 
-	protected void tearDown() throws Exception {
-		super.tearDown();
-		for (File file : tempFiles) {
-			if (!ModulesTest.delete(file)) {
-				System.err.println("warning: ModulesTest unable to delete " + file);
-			}
-		}
-	}
-	
+    public void testAllModulesCreation() {
+        List<Module> badModules = new ArrayList<>();
+        for (String name : MODULE_NAMES) {
+            File dir = new File(BASE_DIR, name);
+            // dir = ../<module>
+            if (dir.isDirectory()) {
+                File classpath = new File(dir, ".classpath");
+                // classpath = ../<module>/.classpath
+                if (classpath.exists()) {
+                    Modules modules = getModules(null);
+                    Module module = modules.getModule(name);
+                    if (!module.valid) {
+                        badModules.add(module);
+                    }
+                }
+            }
+        }
+        if (!badModules.isEmpty()) {
+            StringBuffer sb = new StringBuffer();
+            for (Module module : badModules) {
+                System.err.println(module.toLongString());
+                sb.append("\n");
+                sb.append(module);
+            }
+            fail(sb.toString());
+        }
+    }
+
     Modules getModules(Messager handler) {
         File jarDir = new File("../aj-build-test-jars");
         if (!jarDir.exists()) {
@@ -98,33 +126,7 @@ public class ModulesTest extends TestCase {
         }
         return new Modules(baseDir, jarDir, handler);
     }
-      
-    public void testAllModulesCreation() {
-        List<Module> badModules = new ArrayList<>();
-        for (String name: MODULE_NAMES) {
-            File dir = new File(BASE_DIR, name);
-            if (dir.isDirectory()) {
-                File classpath = new File(dir, ".classpath");
-                if (classpath.exists()) {
-                    Modules modules = getModules(null);
-                    Module module = modules.getModule(name);
-                    if (!module.valid) {
-                        badModules.add(module);
-                    }
-                }
-            }
-        }
-        if (!badModules.isEmpty()) {
-            StringBuffer sb = new StringBuffer();
-            for (Module module: badModules) {
-                System.err.println(module.toLongString());
-                sb.append("\n");
-                sb.append(module);
-            }
-            fail(sb.toString());
-        }
-    }
-    
+
     void checkModule(String s) {
         if ("docs".equals(s) || "lib".equals(s)) {
             return;
@@ -135,13 +137,13 @@ public class ModulesTest extends TestCase {
             assertTrue(module.toLongString(), false);
         }
     }
-    
+
     public void xtestClasspathCreation() {
         Modules modules = getModules(null);
-        
+
         Module ajdt = modules.getModule("org.aspectj.ajdt.core");
         assertTrue(ajdt.valid);
-        
+
         Project project = new Project();
         AntBuilder builder = getBuilder(project);
         Path classpath = new Path(project);
@@ -153,21 +155,27 @@ public class ModulesTest extends TestCase {
             assertTrue(classpath.toString(), false);
         }
     }
-    
+
+    private AntBuilder getBuilder(Project project) {
+        project.setBaseDir(new File("."));
+        project.setName("testOSGIModuleCreation");
+        File tempDir = new File(".");
+        return (AntBuilder)AntBuilder.getBuilder("", project, tempDir);
+    }
+
     /**
-     * This test requires two OSGI modules:
-     * org.aspectj.util, which optionally depends on tempaspectjrt.
-     * Currently, the Ant builder does not handle linked source folders,
-     * and the OSGI support does not work around optional plugins.
+     * This test requires two OSGI modules: org.aspectj.util, which optionally depends on
+     * tempaspectjrt. Currently, the Ant builder does not handle linked source folders, and the OSGI
+     * support does not work around optional plugins.
      */
     public void skip_testOSGIModuleCreation() {
         final String MODULE = "org.aspectj.util";
         final String USES_MODULE = "tempaspectjrt";
-        
+
         Modules modules = getModules(null);
         Module newutil = modules.getModule(MODULE);
         assertTrue(newutil.valid);
-        
+
         Project project = new Project();
         AntBuilder builder = getBuilder(project);
         Path classpath = new Path(project);
@@ -184,14 +192,6 @@ public class ModulesTest extends TestCase {
         }
     }
 
-    private AntBuilder getBuilder(Project project) {
-        project.setBaseDir(new File("."));
-        project.setName("testOSGIModuleCreation");
-        File tempDir = new File(".");
-        return (AntBuilder) AntBuilder.getBuilder("", project, tempDir);        
-    }
-    
-    
     /*********************************************************************
      * The following tests/code enable you to run the entire build in JUnit
      * to debug directly from Eclipse.  To compile using Javac, you will
@@ -199,7 +199,7 @@ public class ModulesTest extends TestCase {
      */
     public void skip_testBuildingAspectJModule() {
         final String moduleName = "org.aspectj.lib";
-        
+
         File modulesDir = new File("..").getAbsoluteFile();
         File buildDir = new File(modulesDir, "aj-build");
         File distDir = new File(buildDir, "dist");
@@ -214,7 +214,7 @@ public class ModulesTest extends TestCase {
         Project project = new Project();
         project.setBaseDir(modulesDir);
         project.setName("testAspectjbuild");
-        
+
         BuildModule bm = new BuildModule();
         bm.setProject(project);
         bm.setAssembleall(true);
@@ -229,20 +229,20 @@ public class ModulesTest extends TestCase {
         bm.setVersion("1.2");
         bm.setVerbose(true);
         bm.setFailonerror(true);
-        
+
         bm.execute();
-        
+
         assertTrue(jar.canRead());
     }
-    
+
     public void skip_testBuildingProduct() {
         final String productName = "tools";
         File modulesDir = new File("..").getAbsoluteFile();
         File buildDir = new File(modulesDir, "aj-build");
         File distDir = new File(buildDir, "dist");
         File jarDir = new File(buildDir, "jars");
-        File productDir = new File(modulesDir, 
-                Util.path(new String[] {"build", "products", productName}));
+        File productDir =
+                new File(modulesDir, Util.path(new String[] {"build", "products", productName}));
 
         jarDir.mkdirs();
         distDir.mkdirs();
@@ -251,7 +251,7 @@ public class ModulesTest extends TestCase {
         project.setBaseDir(modulesDir);
         project.setName("testAspectjToolsbuild");
         project.addBuildListener(new EventBuildListener(Project.MSG_WARN));
-        
+
         BuildModule bm = new BuildModule();
         bm.setProject(project);
         bm.setAssembleall(true);
@@ -265,40 +265,48 @@ public class ModulesTest extends TestCase {
         bm.setVersion("1.2");
         bm.setFailonerror(true);
         bm.execute();
-        
+
         File libDir = new File(distDir, "tools/lib");
-        String[] jars = { "tools", "rt", "weaver", "lib"};
-		for (String s : jars) {
-			File jar = new File(libDir, "aspectj" + s + ".jar");
-			assertTrue(jar.getPath(), jar.canRead());
-			if (10 > jar.length()) {
-				assertTrue(jar + " too small", false);
-			}
-		}
+        String[] jars = {"tools", "rt", "weaver", "lib"};
+        for (String s : jars) {
+            File jar = new File(libDir, "aspectj" + s + ".jar");
+            assertTrue(jar.getPath(), jar.canRead());
+            if (10 > jar.length()) {
+                assertTrue(jar + " too small", false);
+            }
+        }
     }
+
     /**
-     * Show messages from the task.
-     * (normally shown by Ant's default listener)
+     * Show messages from the task. (normally shown by Ant's default listener)
      */
     static class EventBuildListener implements BuildListener {
         final int min;
+
         EventBuildListener(int min) {
             this.min = min;
         }
+
+        public void buildStarted(BuildEvent event) { }
+
         public void buildFinished(BuildEvent event) {}
-        public void buildStarted(BuildEvent event) {  }
-        public void messageLogged(BuildEvent event) { 
+
+        public void targetStarted(BuildEvent event) { }
+
+        public void targetFinished(BuildEvent event) { }
+
+        public void taskStarted(BuildEvent event) { }
+
+        public void taskFinished(BuildEvent event) { }
+
+        public void messageLogged(BuildEvent event) {
             if (min <= event.getPriority()) {
                 Task t = event.getTask();
                 String src = (null == t ? "project" : t.getTaskName());
                 System.out.println(src + ": " + event.getMessage());
             }
         }
-        public void targetFinished(BuildEvent event) { }
-        public void targetStarted(BuildEvent event) { }
-        public void taskFinished(BuildEvent event) { }
-        public void taskStarted(BuildEvent event) { }
-        
-    }    
+
+    }
 
 }

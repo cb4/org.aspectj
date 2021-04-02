@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/build ModuleTest.run.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/build.internal.run.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajdoc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ajdoc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aspectjmatcher/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aspectjmatcher/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aspectjtools/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aspectjtools/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aspectjweaver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aspectjweaver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/main/java/org/aspectj/internal/tools/build/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/main/java/org/aspectj/internal/tools/build/Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/test/java/org/aspectj/internal/build/ModulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/test/java/org/aspectj/internal/build/ModulesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loadtime/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loadtime/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.matcher/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/org.aspectj.matcher/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdefs/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-out.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdefs/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-outJarFile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdefs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/taskdefs/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing-drivers/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testing-drivers/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testing/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/readme-release-tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/readme-release-tests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/util/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weaver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/weaver/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="upstream/master" />
+                <branch-info repo="$PROJECT_DIR$" source="private/master" />
+                <branch-info repo="$PROJECT_DIR$" source="private/priv" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="jdtcore-java16" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="failureBehavior" value="NEVER" />
+        <option name="printErrorStackTraces" value="true" />
+        <option name="usePluginRegistry" value="true" />
+        <option name="userSettingsFile" value="C:\Users\cb4\.maven\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="autoDetectCompiler" value="false" />
+        <option name="dedicatedModuleDir" value="I:\locPubAJ\.idea" />
+        <option name="jdkForImporter" value="#USE_PROJECT_JDK" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+  </component>
+  <component name="ProjectId" id="1pkQX3RONhLAK8uLg5F5fi6GqtM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
+    <property name="ignore.preview.features.used" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc150" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.47586206" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
+  </component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="private" branch="master" />
+      <force-push-target remote-path="origin" branch="master" />
+      <force-push-target remote-path="origin" branch="j15" />
+    </force-push-targets>
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.aspectj.testing.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\locPubAJ\org.aspectj\.github\workflows" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\locPubAJ\org.aspectj\.idea\runConfigurations" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.aspectj.util" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.11 clean install">
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <selectedOptions>
+        <option name="workingDirectory" />
+      </selectedOptions>
+      <option name="PACKAGE_NAME" value="org.aspectj.systemtest.incremental" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea " />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.run-all-junit-tests J11" />
+      <item itemvalue="JUnit.run-all-junit-tests J15" />
+      <item itemvalue="JUnit.build.internal" />
+      <item itemvalue="JUnit.build ModuleTest" />
+      <item itemvalue="Maven.11 clean install" />
+      <item itemvalue="Maven.15 clean install" />
+      <item itemvalue="Maven.08 clean install" />
+      <item itemvalue="Maven.11 tests module tests" />
+      <item itemvalue="Maven.08 tests module tests" />
+      <item itemvalue="Maven.run-all build" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="" />
+      <created>1615724645647</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615724645647</updated>
+      <workItem from="1615724647250" duration="1131000" />
+      <workItem from="1615728535962" duration="895000" />
+      <workItem from="1615729478766" duration="756000" />
+      <workItem from="1615730439799" duration="45984000" />
+      <workItem from="1615911165218" duration="13138000" />
+      <workItem from="1616016461098" duration="6152000" />
+      <workItem from="1616023188824" duration="7897000" />
+      <workItem from="1616058172113" duration="14911000" />
+      <workItem from="1616250055417" duration="24563000" />
+      <workItem from="1617382043757" duration="18430000" />
+    </task>
+    <task id="LOCAL-00001" summary="Revert &quot;Add missing '-options' values -1.5, -1.9 to ajc{150,190_from150}.xml&quot;&#10;&#10;This reverts commit 37d1dbe3">
+      <created>1615844350381</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615844350381</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Revert &quot;Add missing '-options' values -1.5, -1.9 to ajc{150,190_from150}.xml&quot;&#10;&#10;This reverts commit 37d1dbe3">
+      <created>1615844395422</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615844395422</updated>
+    </task>
+    <task id="LOCAL-00003" summary="IDE run configs">
+      <created>1615940073932</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615940073932</updated>
+    </task>
+    <task id="LOCAL-00004" summary="IDE run configs">
+      <created>1615940137142</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615940137142</updated>
+    </task>
+    <task id="LOCAL-00005" summary="IDE run configs">
+      <created>1615940144981</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1615940144981</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update yml, add run configs">
+      <created>1616025203132</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616025203132</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update yml for manual run">
+      <created>1616026868791</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616026868791</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update yml for manual run">
+      <created>1616027144504</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616027144504</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update gitignore">
+      <created>1616027525783</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616027525783</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update gitignore">
+      <created>1616027630657</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616027630657</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add run configs">
+      <created>1616027719165</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616027719165</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add run configs">
+      <created>1616035876796</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1616035876796</updated>
+    </task>
+    <task id="LOCAL-00013" summary="pom changes &amp; project files">
+      <created>1616298842502</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1616298842503</updated>
+    </task>
+    <task id="LOCAL-00014" summary="from shelf">
+      <created>1617141305537</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1617141305537</updated>
+    </task>
+    <task id="LOCAL-00015" summary="plugin version control moved to aspectj-parent pom">
+      <created>1617146592096</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1617146592096</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <envs>
+      <env key="JAVA_HOME" value="C:\Program Files\Java\jdk-11.0.10" />
+    </envs>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="private/privJ15" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <confirmRemoveEmptyChangelist value="2" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="SHOW_PATCH_IN_EXPLORER" value="false" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+    <option name="RELOAD_CONTEXT" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="true" />
+    <MESSAGE value="Revert &quot;Add missing '-options' values -1.5, -1.9 to ajc{150,190_from150}.xml&quot;&#10;&#10;This reverts commit 37d1dbe3" />
+    <MESSAGE value="IDE run configs" />
+    <MESSAGE value="update yml, add run configs" />
+    <MESSAGE value="update yml for manual run" />
+    <MESSAGE value="update gitignore" />
+    <MESSAGE value="add run configs" />
+    <MESSAGE value="pom changes &amp; project files" />
+    <MESSAGE value="pom changes &amp; project files2" />
+    <MESSAGE value="from shelf" />
+    <MESSAGE value="plugin version control moved to aspectj-parent pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="plugin version control moved to aspectj-parent pom" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc150/Ajc150Tests.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc150/Ajc150Tests.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc150/Ajc150Tests.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc150/Ajc150Tests.java</url>
+          <line>1022</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc150/Ajc150Tests.java</url>
+          <line>339</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog>
+          <selected-grouping-rules>
+            <grouping-rule id="XBreakpointGroupingByClassRule" />
+          </selected-grouping-rules>
+        </breakpoints-dialog>
+      </breakpoints-dialog>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.aspectj.ajdt.internal.core.builder.AjBuildManager" memberName="wasFullBuild" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

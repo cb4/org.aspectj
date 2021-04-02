@@ -132,7 +132,7 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
-							<classifier>sources</classifier>
+<!--							<classifier>sources</classifier>-->
 							<finalName>aspectjmatcher-${project.version}</finalName>
 							<archive>
 							</archive>

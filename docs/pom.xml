@@ -130,7 +130,7 @@
                         </goals>
                       </pluginExecutionFilter>
                       <action>
-                        <ignore></ignore>
+                        <ignore>none</ignore>
                       </action>
                     </pluginExecution>
                   </pluginExecutions>

@@ -81,32 +81,17 @@
 
     <pluginManagement>
       <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.1</version>
+<!--
+        <plugin> &lt;!&ndash; For printing console messages during maven build. &ndash;&gt;
+          <groupId>com.soebes.maven.plugins</groupId>
+          <artifactId>echo-maven-plugin</artifactId>
+          <version>0.4.0</version>
         </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <!--					<version>2.22.2</version>-->
-          <version>3.0.0-M5</version>
-          <configuration>
-            <!--<testFailureIgnore>true</testFailureIgnore>-->
-            <argLine>${jvm.arg.addOpens}</argLine>
-            <excludes>
-              <exclude>**/*ModuleTests.java</exclude>
-            </excludes>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-help-plugin</artifactId>
-          <version>3.2.0</version>
-        </plugin>
+-->
 
-        <!-- All these are required for IntelliJ IDEA 2020.3 to override older
-            versions referenced in their maven implementation and super pom. -->
+        <!-- Plugin version management here for all modules is generally useful.
+             It is required for IntelliJ IDEA 2020.3 to override older  versions referenced
+             in their maven implementation and super pom. -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
@@ -124,6 +109,11 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
           <version>3.1.2</version>
         </plugin>
@@ -131,6 +121,11 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>3.0.0-M1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-help-plugin</artifactId>
+          <version>3.2.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -161,6 +156,18 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.2.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M5</version>
+          <configuration>
+            <!--<testFailureIgnore>true</testFailureIgnore>-->
+            <argLine>${jvm.arg.addOpens}</argLine>
+            <excludes>
+              <exclude>**/*ModuleTests.java</exclude>
+            </excludes>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>

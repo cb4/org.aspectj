@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../.idea/ajbrowser.iml" filepath="$PROJECT_DIR$/../.idea/ajbrowser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/ajde.iml" filepath="$PROJECT_DIR$/../.idea/ajde.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/ajde.core.iml" filepath="$PROJECT_DIR$/../.idea/ajde.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/ajdoc.iml" filepath="$PROJECT_DIR$/../.idea/ajdoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/asm.iml" filepath="$PROJECT_DIR$/../.idea/asm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/aspectj-parent.iml" filepath="$PROJECT_DIR$/../.idea/aspectj-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/aspectjmatcher.iml" filepath="$PROJECT_DIR$/../.idea/aspectjmatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/aspectjrt.iml" filepath="$PROJECT_DIR$/../.idea/aspectjrt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/aspectjtools.iml" filepath="$PROJECT_DIR$/../.idea/aspectjtools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/aspectjweaver.iml" filepath="$PROJECT_DIR$/../.idea/aspectjweaver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/bcel-builder.iml" filepath="$PROJECT_DIR$/../.idea/bcel-builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/bridge.iml" filepath="$PROJECT_DIR$/../.idea/bridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/build.iml" filepath="$PROJECT_DIR$/../.idea/build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/docs.iml" filepath="$PROJECT_DIR$/../.idea/docs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/installer.iml" filepath="$PROJECT_DIR$/../.idea/installer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/loadtime.iml" filepath="$PROJECT_DIR$/../.idea/loadtime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/org.aspectj.ajdt.core.iml" filepath="$PROJECT_DIR$/../.idea/org.aspectj.ajdt.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/org.aspectj.matcher.iml" filepath="$PROJECT_DIR$/../.idea/org.aspectj.matcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/org.eclipse.jdt.core.iml" filepath="$PROJECT_DIR$/../.idea/org.eclipse.jdt.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/runtime.iml" filepath="$PROJECT_DIR$/../.idea/runtime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/taskdefs.iml" filepath="$PROJECT_DIR$/../.idea/taskdefs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/testing.iml" filepath="$PROJECT_DIR$/../.idea/testing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/testing-client.iml" filepath="$PROJECT_DIR$/../.idea/testing-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/testing-drivers.iml" filepath="$PROJECT_DIR$/../.idea/testing-drivers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/testing-util.iml" filepath="$PROJECT_DIR$/../.idea/testing-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/tests.iml" filepath="$PROJECT_DIR$/../.idea/tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/util.iml" filepath="$PROJECT_DIR$/../.idea/util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/weaver.iml" filepath="$PROJECT_DIR$/../.idea/weaver.iml" />
+    </modules>
+  </component>
+</project>

@@ -24,7 +24,6 @@
 
 	<build>
 		<plugins>
-
 			<!-- skip creation of test-jar in here -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -37,13 +36,9 @@
 				</executions>
 			</plugin>
 
-
 			<plugin>
-<!--
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-antrun-plugin</artifactId>
-				<version>3.0.0</version>
--->
 				<executions>
 					<execution>
 						<id>unzipasm</id>
@@ -96,6 +91,7 @@
 			</plugin>
 
 			<plugin>
+              <groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
               <!--
                   Version set in aspectj-parent in order to override version from super POM, e.g. 2.2-beta-5 from
@@ -166,7 +162,7 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
-							<classifier>sources</classifier>
+<!--							<classifier>sources</classifier>-->
 							<finalName>aspectjtools-${project.version}</finalName>
 							<archive>
 							</archive>
