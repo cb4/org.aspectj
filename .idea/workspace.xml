@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/taskdefs/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-out.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/taskdefs/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-outJarFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_run_all_junit_tests_1_9_7_BUILD_SNAPSHOT.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/installer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/installer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run-all-junit-tests/src/test/java/RunTheseBeforeYouCommitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/run-all-junit-tests/src/test/java/RunTheseBeforeYouCommitTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/harness/SystemPropertiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/harness/SystemPropertiesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +178,7 @@
       <workItem from="1616023188824" duration="7897000" />
       <workItem from="1616058172113" duration="14911000" />
       <workItem from="1616250055417" duration="24563000" />
-      <workItem from="1617382043757" duration="25310000" />
+      <workItem from="1617382043757" duration="26718000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Add missing '-options' values -1.5, -1.9 to ajc{150,190_from150}.xml&quot;&#10;&#10;This reverts commit 37d1dbe3">
       <created>1615844350381</created>
@@ -289,7 +292,28 @@
       <option name="project" value="LOCAL" />
       <updated>1617403325320</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="pom updates for ant, commons, jakarta">
+      <created>1617551269051</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1617551269051</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Revert &quot;Revert &quot;Remove module 'run-all-junit-tests' from root POM -&gt; speed up the build&quot;&quot;&#10;&#10;This reverts commit eac253e7">
+      <created>1617551885941</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1617551885941</updated>
+    </task>
+    <task id="LOCAL-00019" summary="pom updates for ant, commons, jakarta">
+      <created>1617551984509</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1617551984509</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -340,6 +364,7 @@
     <MESSAGE value="pom changes &amp; project files2" />
     <MESSAGE value="from shelf" />
     <MESSAGE value="plugin version control moved to aspectj-parent pom" />
+    <MESSAGE value="Revert &quot;Revert &quot;Remove module 'run-all-junit-tests' from root POM -&gt; speed up the build&quot;&quot;&#10;&#10;This reverts commit eac253e7" />
     <MESSAGE value="pom updates for ant, commons, jakarta" />
     <option name="LAST_COMMIT_MESSAGE" value="pom updates for ant, commons, jakarta" />
   </component>
