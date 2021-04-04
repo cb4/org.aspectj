@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../.idea/ajbrowser.iml" filepath="$PROJECT_DIR$/../.idea/ajbrowser.iml" />
       <module fileurl="file://$PROJECT_DIR$/../.idea/ajde.iml" filepath="$PROJECT_DIR$/../.idea/ajde.iml" />
       <module fileurl="file://$PROJECT_DIR$/../.idea/ajde.core.iml" filepath="$PROJECT_DIR$/../.idea/ajde.core.iml" />
       <module fileurl="file://$PROJECT_DIR$/../.idea/ajdoc.iml" filepath="$PROJECT_DIR$/../.idea/ajdoc.iml" />

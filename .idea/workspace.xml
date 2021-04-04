@@ -5,10 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/taskdefs/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-out.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/taskdefs/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-outJarFile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ant/lib/junit.jarzzz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_10_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_10_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajde/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ajde/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajdoc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ajdoc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/junit.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loadtime/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loadtime/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdefs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/taskdefs/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testing/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/util/.classpath" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +100,9 @@
   <component name="MavenRunner">
     <option name="delegateBuildToMaven" value="true" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1pkQX3RONhLAK8uLg5F5fi6GqtM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -98,16 +118,17 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="ignore.preview.features.used" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc150" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.47586206" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="Push.Settings">
     <force-push-targets>
@@ -130,7 +151,7 @@
       <recent name="org.aspectj.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.11 tests module tests">
+  <component name="RunManager" selected="Maven.11 clean install">
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <selectedOptions>
         <option name="workingDirectory" />
@@ -175,7 +196,8 @@
       <workItem from="1616023188824" duration="7897000" />
       <workItem from="1616058172113" duration="14911000" />
       <workItem from="1616250055417" duration="24563000" />
-      <workItem from="1617382043757" duration="25310000" />
+      <workItem from="1617382043757" duration="33462000" />
+      <workItem from="1617725095950" duration="2339000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Add missing '-options' values -1.5, -1.9 to ajc{150,190_from150}.xml&quot;&#10;&#10;This reverts commit 37d1dbe3">
       <created>1615844350381</created>
@@ -289,7 +311,35 @@
       <option name="project" value="LOCAL" />
       <updated>1617403325320</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="pom updates for ant, commons, jakarta">
+      <created>1617551269051</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1617551269051</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Revert &quot;Revert &quot;Remove module 'run-all-junit-tests' from root POM -&gt; speed up the build&quot;&quot;&#10;&#10;This reverts commit eac253e7">
+      <created>1617551885941</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1617551885941</updated>
+    </task>
+    <task id="LOCAL-00019" summary="pom updates for ant, commons, jakarta">
+      <created>1617551984509</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1617551984509</updated>
+    </task>
+    <task id="LOCAL-00020" summary="pom updates for ant, commons, jakarta">
+      <created>1617552878130</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1617552878130</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -340,6 +390,7 @@
     <MESSAGE value="pom changes &amp; project files2" />
     <MESSAGE value="from shelf" />
     <MESSAGE value="plugin version control moved to aspectj-parent pom" />
+    <MESSAGE value="Revert &quot;Revert &quot;Remove module 'run-all-junit-tests' from root POM -&gt; speed up the build&quot;&quot;&#10;&#10;This reverts commit eac253e7" />
     <MESSAGE value="pom updates for ant, commons, jakarta" />
     <option name="LAST_COMMIT_MESSAGE" value="pom updates for ant, commons, jakarta" />
   </component>

@@ -19,8 +19,8 @@
         <module name="org.eclipse.jdt.core" />
         <module name="ajde" />
         <module name="ajdoc" />
-        <module name="taskdefs" />
         <module name="testing" />
+        <module name="taskdefs" />
         <module name="testing-util" />
         <module name="runtime" />
         <module name="ajde.core" />
@@ -30,7 +30,6 @@
         <module name="docs" />
         <module name="build" />
         <module name="bcel-builder" />
-        <module name="ajbrowser" />
         <module name="testing-drivers" />
         <module name="org.aspectj.matcher" />
         <module name="asm" />
