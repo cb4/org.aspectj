@@ -226,7 +226,9 @@
 
     <!-- ===================================================================== -->
     <!-- test targets                                                          -->
+    <!-- DEPRECATED - use 'mvn test' instead                                   -->
     <!-- ===================================================================== -->
+<!--
     <target name="test-run-all-junit-tests"
 		depends="init"
         description="run unit tests via run-all-junit-tests module">
@@ -251,6 +253,7 @@
 	        	files="${aspectj.tools.modules},${aspectj.test.modules}"/>
 	    </subant>
 	</target>
+-->
 
 <!--
 <target name="ivy.init" unless="ivy.initialized">
@@ -944,7 +947,7 @@ ant -propertyfile XXX publishtomaven
 
 	<target name="mavenDeployJar">
 		<!--
-		  Currently only an exec is usable, see http://jira.codehaus.org/browse/MANTTASKS-71 
+		  Currently only an exec is usable, see http://jira.codehaus.org/browse/MANTTASKS-71
 		  this mean you need to have maven installed on your system.
 		-->
 		<exec executable="n:/tools/apache-maven-2.0.9/bin/mvn.bat" failonerror="true">
@@ -963,9 +966,9 @@ ant -propertyfile XXX publishtomaven
 
 	<target name="mavenDeploySource">
 		<!--
-		     Currently only an exec is usable, see http://jira.codehaus.org/browse/MANTTASKS-71 
+		     Currently only an exec is usable, see http://jira.codehaus.org/browse/MANTTASKS-71
 		     this mean you need to have maven installed on your system.
-		     
+
 		     failonerror is set to false because deploy:deploy-file goes NPE for some obscure reason
 		     on recent versions, see http://jira.codehaus.org/browse/MDEPLOY-48
 		     -->
