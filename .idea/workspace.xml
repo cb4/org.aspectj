@@ -5,30 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.run/build ModuleTest.run.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.run/build.internal.run.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajdoc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ajdoc/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aspectjmatcher/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aspectjmatcher/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aspectjtools/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aspectjtools/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aspectjweaver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aspectjweaver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/main/java/org/aspectj/internal/tools/build/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/main/java/org/aspectj/internal/tools/build/Module.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/test/java/org/aspectj/internal/build/ModulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/test/java/org/aspectj/internal/build/ModulesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loadtime/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loadtime/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.aspectj.matcher/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/org.aspectj.matcher/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taskdefs/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-out.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taskdefs/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-outJarFile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taskdefs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/taskdefs/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing-drivers/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testing-drivers/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testing/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/readme-release-tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/readme-release-tests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/util/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weaver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/weaver/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taskdefs/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-out.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/taskdefs/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-outJarFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +107,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.47586206" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="Push.Settings">
     <force-push-targets>
@@ -150,7 +130,7 @@
       <recent name="org.aspectj.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.11 clean install">
+  <component name="RunManager" selected="Maven.11 tests module tests">
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <selectedOptions>
         <option name="workingDirectory" />
@@ -195,7 +175,7 @@
       <workItem from="1616023188824" duration="7897000" />
       <workItem from="1616058172113" duration="14911000" />
       <workItem from="1616250055417" duration="24563000" />
-      <workItem from="1617382043757" duration="18430000" />
+      <workItem from="1617382043757" duration="25310000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Add missing '-options' values -1.5, -1.9 to ajc{150,190_from150}.xml&quot;&#10;&#10;This reverts commit 37d1dbe3">
       <created>1615844350381</created>
@@ -302,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617146592096</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="pom updates for ant, commons, jakarta">
+      <created>1617403325320</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1617403325320</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -321,7 +308,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="private/privJ15" />
+                        <option value="kj16-cb4" />
                       </list>
                     </value>
                   </entry>
@@ -353,7 +340,8 @@
     <MESSAGE value="pom changes &amp; project files2" />
     <MESSAGE value="from shelf" />
     <MESSAGE value="plugin version control moved to aspectj-parent pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="plugin version control moved to aspectj-parent pom" />
+    <MESSAGE value="pom updates for ant, commons, jakarta" />
+    <option name="LAST_COMMIT_MESSAGE" value="pom updates for ant, commons, jakarta" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
