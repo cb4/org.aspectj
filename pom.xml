@@ -15,36 +15,42 @@
   <version>1.9.7.BUILD-SNAPSHOT</version>
   <name>AspectJ Parent Project</name>
 
-  <modules>
-    <module>util</module>
-    <module>bridge</module>
-    <module>testing-util</module>
-    <module>org.aspectj.matcher</module>
-    <module>asm</module>
-    <module>testing-client</module>
-    <module>ajbrowser</module>
-    <module>runtime</module>
-    <module>bcel-builder</module>
-    <module>weaver</module>
-    <module>loadtime</module>
-    <module>org.eclipse.jdt.core</module>
-    <module>org.aspectj.ajdt.core</module>
-    <module>ajde.core</module>
-    <module>ajde</module>
-    <module>ajdoc</module>
-    <module>taskdefs</module>
-    <module>testing</module>
-    <module>testing-drivers</module>
-    <module>tests</module>
-    <module>build</module>
-    <!--		<module>run-all-junit-tests</module>-->
-    <module>docs</module>
+	<modules>
+		<module>util</module>
+		<module>bridge</module>
+		<module>testing-util</module>
+		<module>org.aspectj.matcher</module>
+		<module>asm</module>
+		<module>testing-client</module>
+		<module>ajbrowser</module>
+		<module>runtime</module>
+		<module>bcel-builder</module>
+		<module>weaver</module>
+		<module>loadtime</module>
+		<module>org.eclipse.jdt.core</module>
+		<module>org.aspectj.ajdt.core</module>
+		<module>ajde.core</module>
+		<module>ajde</module>
+		<module>ajdoc</module>
+		<module>taskdefs</module>
+		<module>testing</module>
+		<module>testing-drivers</module>
+		<module>tests</module>
+		<module>build</module>
+		<module>docs</module>
 
-    <!-- create the important artifacts we care about -->
-    <module>aspectjrt</module>
-    <module>aspectjweaver</module>
-    <module>aspectjtools</module>
-    <module>aspectjmatcher</module>
+		<!--
+			These are redundant, making almost all tests run 2x. You can still open and run the module manually for now.
+			But why not just run 'mvn test' on top level?
+			TODO: After feedback from Andy Clement, probably just remove the whole module.
+			-->
+		<!--<module>run-all-junit-tests</module>-->
+
+		<!-- create the important artifacts we care about -->
+		<module>aspectjrt</module>
+		<module>aspectjweaver</module>
+		<module>aspectjtools</module>
+		<module>aspectjmatcher</module>
 
     <!-- build the java -jar'able installer -->
     <module>installer</module>
