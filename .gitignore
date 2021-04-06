@@ -7,11 +7,11 @@ target/
 *.versionsBackup
 
 # Files, directories created during build & test. Generated from all cvsignore files.
+# TODO There is more that can be ignored - update.
 /*/*.lst
 /*/*.ajsym
 /*/figures-coverage/*/*.class
-ajbrowser/testdata/bin
-aj-build/
+/aj-build/
 ajde/testdata/AspectJBuildManagerTest/bin
 ajde/testdata/StructureModelRegressionTest/bin
 ajde/testdata/StructureViewManagerTest/bin
@@ -30,7 +30,8 @@ org.aspectj.ajdt.core/testdata/src1/*~
 org.aspectj.ajdt.core/testdata/src1/*.class
 org.aspectj.ajdt.core/testdata/src1/p1
 taskdefs/bin
-tests/ajcore*
+tests/*/ajcore*.txt
+tests/_ajdump/*.*
 tests/new/ajworkingdir
 tests/src/test/resources/org/aspectj/systemtest/ajc150/tests
 

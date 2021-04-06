@@ -38,6 +38,7 @@
 			</plugin>
 
 			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
               <!--
                   Version set in aspectj-parent in order to override version from super POM, e.g. 2.2-beta-5 from
@@ -108,7 +109,7 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
-							<classifier>sources</classifier>
+<!--							<classifier>sources</classifier>-->
 							<finalName>aspectjrt-${project.version}</finalName>
 							<archive>
 							</archive>

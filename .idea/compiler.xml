@@ -17,10 +17,11 @@
         <module name="testing-client" />
         <module name="loadtime" />
         <module name="org.eclipse.jdt.core" />
+        <module name="run-all-junit-tests" />
         <module name="ajde" />
         <module name="ajdoc" />
-        <module name="testing" />
         <module name="taskdefs" />
+        <module name="testing" />
         <module name="testing-util" />
         <module name="runtime" />
         <module name="ajde.core" />
@@ -28,8 +29,8 @@
         <module name="tests" />
         <module name="util" />
         <module name="docs" />
-        <module name="build" />
         <module name="bcel-builder" />
+        <module name="build" />
         <module name="testing-drivers" />
         <module name="org.aspectj.matcher" />
         <module name="asm" />
@@ -38,7 +39,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
-      <module name="ajbrowser" target="1.8" />
       <module name="ajde" target="1.8" />
       <module name="ajde.core" target="1.8" />
       <module name="ajdoc" target="1.8" />

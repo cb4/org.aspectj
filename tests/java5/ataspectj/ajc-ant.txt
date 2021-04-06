@@ -1,4 +1,4 @@
-<!-- ajc-ant script, not to be used from Ant commant line - see AntSpec -->
+<!-- ajc-ant script, not to be used from Ant command line - see AntSpec -->
 <project name="ltw" default="RunThemAllWithJavacCompiledAndLTW">
 
     <!-- using this we can debug the forked VM -->

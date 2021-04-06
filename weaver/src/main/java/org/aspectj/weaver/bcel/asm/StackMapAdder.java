@@ -15,11 +15,11 @@ import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.UnresolvedType;
 import org.aspectj.weaver.World;
 
-import aj.org.objectweb.asm.ClassReader;
-import aj.org.objectweb.asm.ClassVisitor;
-import aj.org.objectweb.asm.ClassWriter;
-import aj.org.objectweb.asm.MethodVisitor;
-import aj.org.objectweb.asm.Opcodes;
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Opcodes;
 
 /**
  * Uses asm to add the stack map attribute to methods in a class. The class is passed in as pure byte data and then a reader/writer
@@ -27,7 +27,7 @@ import aj.org.objectweb.asm.Opcodes;
  * class loading using the context class loader.
  *
  * It is important that the constant pool is preserved here and asm does not try to remove unused entries.  That is because some
- * entries are refered to from classfile attributes.  Asm cannot see into these attributes so does not realise the constant pool
+ * entries are referred to from classfile attributes.  Asm cannot see into these attributes so does not realise the constant pool
  * entries are in use.  In order to ensure the copying of cp occurs, we use the variant super constructor call in AspectJConnectClassWriter
  * that passes in the classreader.  However, ordinarily that change causes a further optimization: that if a classreader sees
  * a methodvisitor that has been created by a ClassWriter then it just copies the data across without changing it (and so it

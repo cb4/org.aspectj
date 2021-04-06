@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/../.idea/org.aspectj.ajdt.core.iml" filepath="$PROJECT_DIR$/../.idea/org.aspectj.ajdt.core.iml" />
       <module fileurl="file://$PROJECT_DIR$/../.idea/org.aspectj.matcher.iml" filepath="$PROJECT_DIR$/../.idea/org.aspectj.matcher.iml" />
       <module fileurl="file://$PROJECT_DIR$/../.idea/org.eclipse.jdt.core.iml" filepath="$PROJECT_DIR$/../.idea/org.eclipse.jdt.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/run-all-junit-tests.iml" filepath="$PROJECT_DIR$/../.idea/run-all-junit-tests.iml" />
       <module fileurl="file://$PROJECT_DIR$/../.idea/runtime.iml" filepath="$PROJECT_DIR$/../.idea/runtime.iml" />
       <module fileurl="file://$PROJECT_DIR$/../.idea/taskdefs.iml" filepath="$PROJECT_DIR$/../.idea/taskdefs.iml" />
       <module fileurl="file://$PROJECT_DIR$/../.idea/testing.iml" filepath="$PROJECT_DIR$/../.idea/testing.iml" />

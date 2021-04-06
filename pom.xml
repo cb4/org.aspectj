@@ -81,14 +81,6 @@
 
     <pluginManagement>
       <plugins>
-<!--
-        <plugin> &lt;!&ndash; For printing console messages during maven build. &ndash;&gt;
-          <groupId>com.soebes.maven.plugins</groupId>
-          <artifactId>echo-maven-plugin</artifactId>
-          <version>0.4.0</version>
-        </plugin>
--->
-
         <!-- Plugin version management here for all modules is generally useful.
              It is required for IntelliJ IDEA 2020.3 to override older  versions referenced
              in their maven implementation and super pom. -->
