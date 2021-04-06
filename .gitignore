@@ -10,7 +10,7 @@ target/
 /*/*.lst
 /*/*.ajsym
 /*/figures-coverage/*/*.class
-ajbrowser/testdata/bin
+#ajbrowser/testdata/bin
 aj-build/
 ajde/testdata/AspectJBuildManagerTest/bin
 ajde/testdata/StructureModelRegressionTest/bin
@@ -30,7 +30,7 @@ org.aspectj.ajdt.core/testdata/src1/*~
 org.aspectj.ajdt.core/testdata/src1/*.class
 org.aspectj.ajdt.core/testdata/src1/p1
 taskdefs/bin
-tests/ajcore*
+/*/*/ajcore*
 tests/new/ajworkingdir
 tests/src/test/resources/org/aspectj/systemtest/ajc150/tests
 

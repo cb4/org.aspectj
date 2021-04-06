@@ -5,12 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loadtime/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loadtime/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taskdefs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/taskdefs/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testing/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_10_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/All_in_run_all_junit_tests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/run_all_junit_tests_J08.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/run_all_tests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run-all-junit-tests/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-out.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run-all-junit-tests/IncrementalAjcTaskTest-temp/testInpathDirCopyFilterWithJar-outJarFile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run-all-junit-tests/bin/AjdocTest/Ajdoc14Source.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Advise_boo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Advise_too.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/_ajdump/Anno.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/_ajdump/InterceptTraceds.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/_ajdump/MakeItd.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/_ajdump/TestClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/_ajdump/_before/Anno.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/_ajdump/_before/InterceptTraceds.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/_ajdump/_before/MakeItd.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/_ajdump/_before/TestClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/java5/ataspectj/ajcore.20210406.135957.870.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/java5/ataspectj/ajcore.20210406.135957.997.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/java5/ataspectj/ajcore.20210406.140003.901.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/java5/ataspectj/ajcore.20210406.140003.932.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/java5/ataspectj/ajcore.20210406.140010.354.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/java5/ataspectj/ajcore.20210406.140010.449.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_10_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_run_all_junit_tests_1_9_7_BUILD_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/08_tests_module_tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/08_tests_module_tests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/11_tests_module_tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/11_tests_module_tests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/run_all_junit_tests_J11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/run_all_junit_tests_J11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/run_all_junit_tests_J15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/run_all_junit_tests_J15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajdoc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ajdoc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bcel-builder/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/bcel-builder/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dist/doc/README-190.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dist/doc/README-190.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/asm/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lib/asm/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/.cvsignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/util/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weaver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/weaver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weaver/src/.cvsignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/LazyClassGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/LazyClassGen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/AsmDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/AsmDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/StackMapAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/StackMapAdder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +121,8 @@
       <MavenImportingSettings>
         <option name="autoDetectCompiler" value="false" />
         <option name="dedicatedModuleDir" value="I:\locPubAJ\.idea" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
         <option name="jdkForImporter" value="#USE_PROJECT_JDK" />
       </MavenImportingSettings>
     </option>
@@ -109,11 +154,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="ignore.preview.features.used" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc150" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tests" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.47586206" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="Push.Settings">
     <force-push-targets>
@@ -136,7 +181,7 @@
       <recent name="org.aspectj.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.11 clean install">
+  <component name="RunManager" selected="JUnit.ajc1810">
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <selectedOptions>
         <option name="workingDirectory" />
@@ -152,15 +197,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.All in run-all-junit-tests" />
       <item itemvalue="JUnit.run-all-junit-tests J11" />
+      <item itemvalue="JUnit.run-all-junit-tests J08" />
       <item itemvalue="JUnit.run-all-junit-tests J15" />
       <item itemvalue="JUnit.build.internal" />
       <item itemvalue="JUnit.build ModuleTest" />
+      <item itemvalue="JUnit.ajc1810" />
       <item itemvalue="Maven.11 clean install" />
       <item itemvalue="Maven.15 clean install" />
       <item itemvalue="Maven.08 clean install" />
       <item itemvalue="Maven.11 tests module tests" />
       <item itemvalue="Maven.08 tests module tests" />
+      <item itemvalue="Maven.run-all-tests" />
       <item itemvalue="Maven.run-all build" />
     </list>
   </component>
@@ -183,7 +232,8 @@
       <workItem from="1616250055417" duration="24563000" />
       <workItem from="1617382043757" duration="33462000" />
       <workItem from="1617725095950" duration="2339000" />
-      <workItem from="1617727450548" duration="1058000" />
+      <workItem from="1617727450548" duration="3348000" />
+      <workItem from="1617730816830" duration="15614000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Add missing '-options' values -1.5, -1.9 to ajc{150,190_from150}.xml&quot;&#10;&#10;This reverts commit 37d1dbe3">
       <created>1615844350381</created>
@@ -339,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617728234865</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Update ant, ant-launcher to 1.10.9">
+      <created>1617728785817</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1617728785817</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -392,7 +449,8 @@
     <MESSAGE value="plugin version control moved to aspectj-parent pom" />
     <MESSAGE value="Revert &quot;Revert &quot;Remove module 'run-all-junit-tests' from root POM -&gt; speed up the build&quot;&quot;&#10;&#10;This reverts commit eac253e7" />
     <MESSAGE value="pom updates for ant, commons, jakarta" />
-    <option name="LAST_COMMIT_MESSAGE" value="pom updates for ant, commons, jakarta" />
+    <MESSAGE value="Update ant, ant-launcher to 1.10.9" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update ant, ant-launcher to 1.10.9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -422,6 +480,29 @@
           <line>339</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/AsmDetector.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/LazyClassGen.java</url>
+          <line>754</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc1810/Ajc1810Tests.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc1810/Ajc1810Tests.java</url>
+          <line>165</line>
+          <properties class="org.aspectj.systemtest.ajc1810.Ajc1810Tests" method="suite">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog>
@@ -440,5 +521,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/org_aspectj$ajc1810.ic" NAME="ajc1810 Coverage Results" MODIFIED="1617747351869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

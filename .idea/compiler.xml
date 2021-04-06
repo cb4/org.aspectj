@@ -10,17 +10,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
       </profile>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+      <profile name="Annotation profile for AspectJ Parent Project" enabled="true">
+        <sourceOutputDir name="../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="testing-client" />
         <module name="loadtime" />
         <module name="org.eclipse.jdt.core" />
+        <module name="run-all-junit-tests" />
         <module name="ajde" />
         <module name="ajdoc" />
-        <module name="testing" />
         <module name="taskdefs" />
+        <module name="testing" />
         <module name="testing-util" />
         <module name="runtime" />
         <module name="ajde.core" />
@@ -28,8 +29,8 @@
         <module name="tests" />
         <module name="util" />
         <module name="docs" />
-        <module name="build" />
         <module name="bcel-builder" />
+        <module name="build" />
         <module name="testing-drivers" />
         <module name="org.aspectj.matcher" />
         <module name="asm" />

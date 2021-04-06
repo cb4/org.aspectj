@@ -6,7 +6,7 @@
   <target name="package" description="Jarjar asm-NNN.jar and prefix package name with aj">
     <jarjar destfile="asm-9.1.renamed.jar">
       <zipfileset src="asm-9.1.jar" excludes="module-info.class"/>
-      <rule pattern="org.objectweb.asm.**" result="aj.org.objectweb.asm.@1"/>
+      <rule pattern="org.objectweb.asm.**" result="org.objectweb.asm.@1"/>
     </jarjar>
   </target>
 

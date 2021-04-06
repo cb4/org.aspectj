@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="11 tests module tests" type="MavenRunConfiguration" factoryName="Maven">
-    <output_file path="$PROJECT_DIR$/../../locPtemp/tests-module-11-maven.txt" is_save="true" />
+  <configuration default="false" name="run-all-tests" type="MavenRunConfiguration" factoryName="Maven">
+    <output_file path="$PROJECT_DIR$/../../locPtemp/run-all-tests11-maven.txt" is_save="true" />
     <MavenSettings>
       <option name="myGeneralSettings" />
       <option name="myRunnerSettings">
@@ -34,11 +34,12 @@
           <option name="pomFileName" value="pom.xml" />
           <option name="profilesMap">
             <map>
+              <entry key="repeat-all-unit-tests" value="true" />
               <entry key="create-docs" value="false" />
             </map>
           </option>
           <option name="resolveToWorkspace" value="true" />
-          <option name="workingDirPath" value="$PROJECT_DIR$" />
+          <option name="workingDirPath" value="$PROJECT_DIR$/run-all-junit-tests" />
         </MavenRunnerParameters>
       </option>
     </MavenSettings>

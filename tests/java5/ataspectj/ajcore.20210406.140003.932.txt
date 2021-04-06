@@ -1,0 +1,71 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.9.7.BUILD-SNAPSHOT built on Tuesday Apr 6, 2021 at 10:45:42 PDT
+---- Dump Properties ---
+Dump file: ajcore.20210406.140003.932.txt
+Dump reason: org.aspectj.weaver.BCException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+---- System Properties ---
+sun.desktop=windows
+awt.toolkit=sun.awt.windows.WToolkit
+java.specification.version=11
+sun.cpu.isalist=amd64
+sun.jnu.encoding=Cp1252
+java.class.path=C:\temp\ajcSandbox\org.aspectj\ajcTest15517222258865603360.tmp;I:\locPubAJ\org.aspectj\asm\target\classes;I:\locPubAJ\org.aspectj\bridge\target\classes;I:\locPubAJ\org.aspectj\loadtime\target\classes;I:\locPubAJ\org.aspectj\weaver\target\classes;I:\locPubAJ\org.aspectj\org.aspectj.matcher\target\classes;I:\locPubAJ\org.aspectj\bcel-builder\target\classes;I:\locPubAJ\org.aspectj\util\target\classes;I:\locPubAJ\org.aspectj\testing-client\target\classes;I:\locPubAJ\org.aspectj\runtime\target\classes;I:\locPubAJ\org.aspectj\lib\junit\junit.jar;I:\locPubAJ\org.aspectj\lib\bcel\bcel.jar;I:\locPubAJ\org.aspectj\lib\bcel\bcel-verifier.jar;I:\locPubAJ\org.aspectj\lib\asm\asm-9.1.renamed.jar;I:\locPubAJ\org.aspectj\aj-build\jars;I:\locPubAJ\org.aspectj\lib\test\testing-client.jar;I:\locPubAJ\org.aspectj\lib\test\aspectjrt.jar;C:\temp\ajcSandbox\org.aspectj\ajcTest15517222258865603360.tmp\main1.jar
+java.vm.vendor=Oracle Corporation
+sun.arch.data.model=64
+user.variant=
+java.vendor.url=https://openjdk.java.net/
+user.timezone=America/Chicago
+os.name=Windows 10
+java.vm.specification.version=11
+sun.java.launcher=SUN_STANDARD
+user.country=US
+sun.boot.library.path=C:\Program Files\Java\jdk-11.0.10\bin
+sun.java.command=ataspectj.ltwreweavable.Main
+jdk.debug=release
+sun.cpu.endian=little
+user.home=C:\Users\cb4
+user.language=en
+java.specification.vendor=Oracle Corporation
+java.version.date=2021-01-19
+java.home=C:\Program Files\Java\jdk-11.0.10
+file.separator=\
+java.vm.compressedOopsMode=Zero based
+line.separator=
+
+java.specification.name=Java Platform API Specification
+java.vm.specification.vendor=Oracle Corporation
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+user.script=
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.runtime.version=11.0.10+8-LTS-162
+user.name=cb4
+path.separator=;
+os.version=10.0
+java.runtime.name=Java(TM) SE Runtime Environment
+file.encoding=Cp1252
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+java.vendor.version=18.9
+java.vendor.url.bug=https://bugreport.java.com/bugreport/
+java.io.tmpdir=D:\Temp\cb4\
+java.version=11.0.10
+user.dir=I:\locPubAJ\org.aspectj\tests\java5\ataspectj
+os.arch=amd64
+java.vm.specification.name=Java Virtual Machine Specification
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+sun.os.patch.level=
+java.library.path=C:\Program Files\Java\jdk-11.0.10\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;B:\Oculus\Support\oculus-runtime;C:\Git\cmd;C:\Git\usr\bin;C:\Users\cb4\AppData\Local\Microsoft\WindowsApps;C:\Users\cb4\AppData\Local\GitHubDesktop\bin;.
+java.vendor=Oracle Corporation
+java.vm.info=mixed mode
+java.vm.version=11.0.10+8-LTS-162
+sun.io.unicode.encoding=UnicodeLittle
+java.class.version=55.0
+_dummy=
+---- Command Line ---
+Empty
+---- Full Classpath ---
+Empty
+---- Compiler Messages ---
+Empty
