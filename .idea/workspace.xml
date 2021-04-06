@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ant/lib/junit.jarzzz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_10_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_10_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajde/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ajde/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajdoc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ajdoc/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ant/lib/junit.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loadtime/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loadtime/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taskdefs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/taskdefs/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testing/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/util/.classpath" afterDir="false" />
-    </list>
+    <list default="true" id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,6 +176,7 @@
       <workItem from="1616250055417" duration="24563000" />
       <workItem from="1617382043757" duration="33462000" />
       <workItem from="1617725095950" duration="2339000" />
+      <workItem from="1617727450548" duration="616000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Add missing '-options' values -1.5, -1.9 to ajc{150,190_from150}.xml&quot;&#10;&#10;This reverts commit 37d1dbe3">
       <created>1615844350381</created>
@@ -339,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617552878130</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="pom updates for ant, commons, jakarta">
+      <created>1617727876405</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1617727876405</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
