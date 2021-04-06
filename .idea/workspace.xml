@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="" />
+    <list default="true" id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loadtime/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loadtime/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/run-all-junit-tests/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdefs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/taskdefs/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testing/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,7 +183,7 @@
       <workItem from="1616250055417" duration="24563000" />
       <workItem from="1617382043757" duration="33462000" />
       <workItem from="1617725095950" duration="2339000" />
-      <workItem from="1617727450548" duration="616000" />
+      <workItem from="1617727450548" duration="1058000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Add missing '-options' values -1.5, -1.9 to ajc{150,190_from150}.xml&quot;&#10;&#10;This reverts commit 37d1dbe3">
       <created>1615844350381</created>
@@ -325,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617727876405</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="pom updates for ant, commons, jakarta">
+      <created>1617728234865</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1617728234865</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
