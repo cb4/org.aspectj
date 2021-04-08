@@ -15,11 +15,11 @@ import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.UnresolvedType;
 import org.aspectj.weaver.World;
 
-import org.objectweb.asm.ClassReader;
-import org.objectweb.asm.ClassVisitor;
-import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.MethodVisitor;
-import org.objectweb.asm.Opcodes;
+import aj.org.objectweb.asm.ClassReader;
+import aj.org.objectweb.asm.ClassVisitor;
+import aj.org.objectweb.asm.ClassWriter;
+import aj.org.objectweb.asm.MethodVisitor;
+import aj.org.objectweb.asm.Opcodes;
 
 /**
  * Uses asm to add the stack map attribute to methods in a class. The class is passed in as pure byte data and then a reader/writer
@@ -38,6 +38,7 @@ import org.objectweb.asm.Opcodes;
 public class StackMapAdder {
 
 	public static byte[] addStackMaps(World world, byte[] data) {
+
 		try {
 			ClassReader cr = new ClassReader(data);
 			ClassWriter cw = new AspectJConnectClassWriter(cr, world);
@@ -48,7 +49,7 @@ public class StackMapAdder {
 			// If in here fixing an error about version, change the ASMX in class above!
 			System.err.println("AspectJ Internal Error: unable to add stackmap attributes. " + t.getMessage());
 			t.printStackTrace();
-			AsmDetector.isAsmAround = false;
+//			AsmDetector.isAsmAround = false;
 			return data;
 		}
 	}

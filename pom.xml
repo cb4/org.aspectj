@@ -82,7 +82,7 @@
     <pluginManagement>
       <plugins>
         <!-- Plugin version management here for all modules is generally useful.
-             It is required for IntelliJ IDEA 2020.3 to override older  versions referenced
+             It is required for IntelliJ IDEA 2020.3 to override older versions referenced
              in their maven implementation and super pom. -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -195,7 +195,7 @@
             <fileset>
               <directory>.</directory>
               <includes>
-                <include>**/ajcore.*.txt</include>
+                <include>**/ajcore*.*.txt</include>
               </includes>
               <!--
                                           <excludes>

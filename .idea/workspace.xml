@@ -4,20 +4,117 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsonCatalog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Ajc1810Tests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Ajc1810Tests_testBinding_508661.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="19216094-01bf-484a-89f1-3be275a06e87" name="Default Changelist" comment="asm continued">
+      <change afterPath="$PROJECT_DIR$/lib/ant/1.10.9/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ant/1.10.9/ant-1.10.9-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ant/1.10.9/ant-1.10.9-javadoc.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ant/1.10.9/ant-1.10.9-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ant/1.10.9/ant-1.10.9-sources.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ant/1.10.9/ant-1.10.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ant/1.10.9/ant-1.10.9.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ant/1.10.9/ant-1.10.9.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ant/1.10.9/ant-1.10.9.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ant/lib/ant-src.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/3.8.1/README.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/3.8.1/junit-src.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/3.8.1/junit.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/4.13/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/4.13/junit-4.13-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/4.13/junit-4.13-javadoc.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/4.13/junit-4.13-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/4.13/junit-4.13-sources.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/4.13/junit-4.13.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/4.13/junit-4.13.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/4.13/junit-4.13.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/4.13/junit-4.13.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit/junit-src.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/ajcore.20210414.210400.910.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asm/src/.cvsignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aspectjrt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aspectjrt/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcel-builder/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/bcel-builder/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/asm/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lib/asm/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/java5/ataspectj/ajc-ant.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/java5/ataspectj/ajc-ant.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajde.core/.classpath.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajdoc/.classpath.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/INSTALL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/KEYS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/LICENSE.dom" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/LICENSE.sax" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/LICENSE.xerces" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/TODO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/WHATSNEW" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/ant-src.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/aspectj-ant-readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/ant" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/ant.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/ant.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/antRun" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/antRun.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/antRun.pl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/antenv.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/complete-ant-cmd.pl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/envset.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/lcp.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/runant.pl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/runant.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/bin/runrc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/ant-bootstrap.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/changelog.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/checkstyle/checkstyle-frames.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/checkstyle/checkstyle-text.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/checkstyle/checkstyle-xdoc.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/coverage-frames.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/jdepend-frames.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/jdepend.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/junit-frames-xalan1.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/junit-frames.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/junit-noframes.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/log.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/maudit-frames.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/mmetrics-frames.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/etc/tagdiff.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-antlr.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-apache-bcel.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-apache-bsf.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-apache-log4j.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-apache-oro.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-apache-regexp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-apache-resolver.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-commons-logging.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-commons-net.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-icontract.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-jai.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-javamail.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-jdepend.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-jmf.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-jsch.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-junit.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-launcher.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-netrexx.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-nodeps.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-starteam.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-stylebook.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-swing.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-trax.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-vaj.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-weblogic.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-xalan1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant-xslp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/ant.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ant/lib/ant.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/junit.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/xercesImpl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/lib/xml-apis.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ant/welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit/README.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit/junit-src.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit/junit.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/junit/junit.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/test/aspectjrt.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/test/aspectjrt.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/test/testing-client.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/test/testing-client.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.ajdt.core/src/.cvsignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.ajdt.core/src/test/java/org/aspectj/tools/ajc/Ajc.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.aspectj.ajdt.core/src/test/java/org/aspectj/tools/ajc/Ajc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.ajdt.core/src/test/java/org/aspectj/tools/ajc/AjcTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/org.aspectj.ajdt.core/src/test/java/org/aspectj/tools/ajc/AjcTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/java5/ataspectj/ajcore.20210406.135957.870.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/java5/ataspectj/ajcore.20210406.135957.997.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/java5/ataspectj/ajcore.20210406.140003.901.txt" beforeDir="false" />
@@ -25,6 +122,9 @@
       <change beforePath="$PROJECT_DIR$/tests/java5/ataspectj/ajcore.20210406.140010.354.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/java5/ataspectj/ajcore.20210406.140010.449.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/util/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/util/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weaver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/weaver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/LazyClassGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/LazyClassGen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/AsmDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/AsmDetector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/StackMapAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/StackMapAdder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +184,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="failureBehavior" value="NEVER" />
-        <option name="nonRecursive" value="true" />
         <option name="printErrorStackTraces" value="true" />
         <option name="usePluginRegistry" value="true" />
         <option name="userSettingsFile" value="C:\Users\cb4\.maven\settings.xml" />
@@ -95,8 +194,6 @@
         <option name="autoDetectCompiler" value="false" />
         <option name="createModulesForAggregators" value="false" />
         <option name="dedicatedModuleDir" value="I:\locPubAJ\.idea" />
-        <option name="downloadDocsAutomatically" value="true" />
-        <option name="downloadSourcesAutomatically" value="true" />
         <option name="jdkForImporter" value="#USE_PROJECT_JDK" />
       </MavenImportingSettings>
     </option>
@@ -130,7 +227,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.47586206" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="Push.Settings">
     <force-push-targets>
@@ -393,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617728785817</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="asm continued">
+      <created>1617906820972</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1617906820972</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -447,7 +551,9 @@
     <MESSAGE value="Revert &quot;Revert &quot;Remove module 'run-all-junit-tests' from root POM -&gt; speed up the build&quot;&quot;&#10;&#10;This reverts commit eac253e7" />
     <MESSAGE value="pom updates for ant, commons, jakarta" />
     <MESSAGE value="Update ant, ant-launcher to 1.10.9" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="asm continued" />
+    <option name="LAST_COMMIT_MESSAGE" value="asm continued" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -477,30 +583,36 @@
           <line>339</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/AsmDetector.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/LazyClassGen.java</url>
-          <line>754</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/StackMapAdder.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc1810/Ajc1810Tests.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="42" />
+          <url>file://$PROJECT_DIR$/org.aspectj.ajdt.core/src/test/java/org/aspectj/tools/ajc/AjcTestCase.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/tests/src/test/java/org/aspectj/systemtest/ajc1810/Ajc1810Tests.java</url>
           <line>25</line>
-          <option name="timeStamp" value="43" />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/LazyClassGen.java</url>
+          <line>573</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/weaver/src/main/java/org/aspectj/weaver/bcel/asm/AsmDetector.java</url>
+          <line>22</line>
+          <properties class="org.aspectj.weaver.bcel.asm.AsmDetector" method="isAsmAround">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/testing/src/test/java/org/aspectj/testing/AjcTest.java</url>
+          <line>53</line>
+          <properties class="org.aspectj.testing.AjcTest" method="runTest">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -514,8 +626,20 @@
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.aspectj.ajdt.internal.core.builder.AjBuildManager" memberName="wasFullBuild" />
+        <PinnedItemInfo parentTag="org.aspectj.weaver.bcel.BcelWeaver" memberName="addedClasses" />
+        <PinnedItemInfo parentTag="org.aspectj.systemtest.ajc1810.Ajc1810Tests" memberName="DEFAULT_CLASSPATH_ENTRIES" />
+        <PinnedItemInfo parentTag="org.aspectj.weaver.bcel.BcelWorld" memberName="classPath" />
+        <PinnedItemInfo parentTag="org.aspectj.apache.bcel.generic.ClassGen" memberName="major" />
+        <PinnedItemInfo parentTag="org.aspectj.weaver.bcel.UnwovenClassFileWithThirdPartyManagedBytecode" memberName="className" />
+        <PinnedItemInfo parentTag="org.aspectj.weaver.bcel.BcelWorld" memberName="shouldGenerateStackMaps" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="((BcelWorld)((LazyClassGen)this).world).shouldGenerateStackMaps" custom="org.aspectj.weaver.bcel.LazyClassGen,org.aspectj.weaver.bcel.BcelWorld" />
+        <watch expression="((BcelWeaver)this).addedClasses" custom="org.aspectj.weaver.bcel.BcelWeaver" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>

@@ -65,49 +65,38 @@ public abstract class AjcTestCase extends TestCase {
 	// see Ajc and AntSpec
 	public static final String DEFAULT_CLASSPATH_ENTRIES =
 			Ajc.outputFolders("bridge","util","loadtime","weaver","asm","testing-client","runtime","org.aspectj.matcher")
-			//			File.pathSeparator + ".." + File.separator + "bridge" + File.separator
-			//			+ "bin" + File.pathSeparator + ".." + File.separator + "util" + File.separator + "bin" + File.pathSeparator + ".."
-			//			+ File.separator + "loadtime" + File.separator + "bin" + File.pathSeparator + ".." + File.separator + "weaver"
-			//			+ File.separator + "bin" + File.pathSeparator + ".." + File.separator + "weaver5" + File.separator + "bin"
-			//			+ File.pathSeparator + ".." + File.separator + "asm" + File.separator + "bin" + File.pathSeparator + ".."
-			//			+ File.separator + "testing-client" + File.separator + "bin" + File.pathSeparator + ".." + File.separator + "runtime"
-			//			+ File.separator + "bin" + File.pathSeparator + ".." + File.separator + "aspectj5rt" + File.separator + "bin"
-			//			+ File.pathSeparator + ".." + File.separator + "org.aspectj.matcher" + File.separator + "bin"
-			+ File.pathSeparator
-			+ ".." + File.separator + "lib" + File.separator + "junit" + File.separator
-			+ "junit.jar"
-			+ File.pathSeparator
-			+ ".."
-			+ File.separator
-			+ "lib"
-			+ File.separator
-			+ "bcel"
-			+ File.separator
-			+ "bcel.jar"
-			+ File.pathSeparator
-			+ ".."
-			+ File.separator
-			+ "lib"
-			+ File.separator
-			+ "bcel"
-			+ File.separator
-			+ "bcel-verifier.jar"
-
-			+ File.pathSeparator + ".." +  File.separator + "lib" + File.separator + "asm" + File.separator + "asm-9.1.renamed.jar"
+//			File.pathSeparator + ".." + File.separator + "bridge" + File.separator	+ "bin"
+//			+ File.pathSeparator + ".." + File.separator + "util" + File.separator + "bin"
+//			+ File.pathSeparator + ".."	+ File.separator + "loadtime" + File.separator + "bin"
+//			+ File.pathSeparator + ".." + File.separator + "weaver"	+ File.separator + "bin"
+//			+ File.pathSeparator + ".." + File.separator + "weaver5" + File.separator + "bin"
+//			+ File.pathSeparator + ".." + File.separator + "asm" + File.separator + "bin"
+//			+ File.pathSeparator + ".."	+ File.separator + "testing-client" + File.separator + "bin"
+//			+ File.pathSeparator + ".." + File.separator + "runtime"	+ File.separator + "bin"
+//			+ File.pathSeparator + ".." + File.separator + "aspectj5rt" + File.separator + "bin"
+//			+ File.pathSeparator + ".." + File.separator + "org.aspectj.matcher" + File.separator + "bin"
+//			+ File.pathSeparator + ".." + File.separator + "lib" + File.separator + "junit" + File.separator	+ "junit.jar"
+			+ File.pathSeparator	+ ".."	+ File.separator	+ "lib"	+ File.separator	+ "bcel"	+ File.separator	+ "bcel.jar"
+			+ File.pathSeparator	+ ".."	+ File.separator	+ "lib"	+ File.separator	+ "bcel"	+ File.separator	+ "bcel-verifier.jar"
+//   + File.pathSeparator + ".." + File.separator + "lib" + File.separator + "asm" + File.separator + "asm-9.1.renamed.jar"
 
 			// When the build machine executes the tests, it is using code built into jars rather than code build into
 			// bin directories. This means for the necessary types to be found we have to put these jars on the classpath:
-			+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars" + File.separator + "bridge.jar"
-			+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars" + File.separator + "util.jar"
-			+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars" + File.separator
-			+ "org.aspectj.matcher.jar" + File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars"
-			+ File.separator + "loadtime.jar" + File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars"
-			+ File.separator + "weaver.jar" + File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars"
-			+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars"
-			+ File.separator + "asm.jar" + File.pathSeparator + ".." + File.separator + "lib" + File.separator + "test"
-			+ File.separator + "testing-client.jar"
-			// hmmm, this next one should perhaps point to an aj-build jar...
-			+ File.pathSeparator + ".." + File.separator + "lib" + File.separator + "test" + File.separator + "aspectjrt.jar";
+   // cb4 04/08/21 Not needed with maven managing dependencies in .classpath files.
+//+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars" + File.separator + "bridge.jar"
+//+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars" + File.separator + "util.jar"
+//+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars" + File.separator + "org.aspectj.matcher.jar"
+//+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars" + File.separator + "loadtime.jar"
+//+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars" + File.separator + "weaver.jar"
+//+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars"
+//+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars"	+ File.separator + "asm.jar"
+
+   // cb4 TODO Move these to module directories.
+//   + File.pathSeparator + ".." + File.separator + "lib" + File.separator + "test"	+ File
+//   .separator + "testing-client.jar"
+//			+ File.pathSeparator + ".." + File.separator + "lib" + File.separator + "test" + File
+//			.separator + "aspectjrt.jar"
+   ;
 
 	/*
 	 * Save reference to real stderr and stdout before starting redirection
