@@ -48,8 +48,8 @@ log.txt
 
 # IntelliJ IDEA - Temporarily ignore to keep independent of
 #.idea/workspace.iml
-/.idea/
-#!.idea/runConfigurations
+.idea/
+!.idea/runConfigurations
 
 # Visual Studio Code
 #.vscode

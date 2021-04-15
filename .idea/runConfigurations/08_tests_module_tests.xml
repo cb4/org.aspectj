@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="08 tests module tests" type="MavenRunConfiguration" factoryName="Maven">
-    <output_file path="$PROJECT_DIR$/../../locPtemp/run-all-tests08-maven.txt" is_save="true" />
+    <output_file path="$PROJECT_DIR$/../../locPtemp/tests-module-08-maven.txt" is_save="true" />
     <MavenSettings>
       <option name="myGeneralSettings" />
       <option name="myRunnerSettings">
