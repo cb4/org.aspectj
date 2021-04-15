@@ -54,7 +54,7 @@ import org.aspectj.weaver.WeaverMessages;
 import org.aspectj.weaver.WeaverStateInfo;
 import org.aspectj.weaver.World;
 import org.aspectj.weaver.bcel.asm.StackMapAdder;
-import aj.org.objectweb.asm.*;
+import org.objectweb.asm.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -81,7 +81,6 @@ import java.util.Vector;
  * different if this represents an Aspect.
  */
 public final class LazyClassGen {
-public ClassReader reader;
 
 public static final ObjectType proceedingTjpType = new ObjectType("org.aspectj.lang.ProceedingJoinPoint");
 public static final ObjectType tjpType = new ObjectType("org.aspectj.lang.JoinPoint");
