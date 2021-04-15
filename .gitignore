@@ -46,7 +46,7 @@ log.txt
 #.settings
 
 # IntelliJ IDEA
-workspace.iml
+.idea/workspace.iml
 #.idea/*
 #!.idea/runConfigurations
 
