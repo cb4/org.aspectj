@@ -39,15 +39,16 @@ tests/src/test/resources/org/aspectj/systemtest/ajc150/tests
 log.txt
 
 # Save project files for each IDE. TODO revisit once build is cleaned up.
-# Goal is clean imports into each IDE without including user-sepcfic settings.
+# Goal is clean imports into each IDE without including user-sepcfic settings
+# so that importing has correct project structure.
 # Eclipse
 .classpath
 #.project
 #.settings
 
-# IntelliJ IDEA
+# IntelliJ IDEA - Temporarily ignore to keep independent of
 .idea/workspace.iml
-#.idea/*
+.idea/*
 #!.idea/runConfigurations
 
 # Visual Studio Code
