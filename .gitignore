@@ -8,8 +8,8 @@ target/
 
 # Files, directories created during build & test. Generated from all cvsignore files.
 # TODO There is more that can be ignored - update.
-/*/*.lst
-/*/*.ajsym
+*.lst
+*.ajsym
 /*/figures-coverage/*/*.class
 /aj-build/
 ajde/testdata/AspectJBuildManagerTest/bin
@@ -39,15 +39,16 @@ tests/src/test/resources/org/aspectj/systemtest/ajc150/tests
 log.txt
 
 # Save project files for each IDE. TODO revisit once build is cleaned up.
-# Goal is clean imports into each IDE without including user-sepcfic settings.
+# Goal is clean imports into each IDE without including user-sepcfic settings
+# so that importing has correct project structure.
 # Eclipse
 .classpath
 #.project
 #.settings
 
-# IntelliJ IDEA
-.idea/workspace.iml
-#.idea/*
+# IntelliJ IDEA - Temporarily ignore to keep independent of
+#.idea/workspace.iml
+/.idea/
 #!.idea/runConfigurations
 
 # Visual Studio Code
@@ -58,3 +59,4 @@ log.txt
 
 # Linux
 .attach_pid*
+

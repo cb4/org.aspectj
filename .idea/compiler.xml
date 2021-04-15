@@ -19,9 +19,9 @@
         <module name="loadtime" />
         <module name="org.eclipse.jdt.core" />
         <module name="ajde" />
-        <module name="ajdoc" />
         <module name="taskdefs" />
         <module name="testing" />
+        <module name="ajdoc" />
         <module name="testing-util" />
         <module name="runtime" />
         <module name="ajde.core" />
