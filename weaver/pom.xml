@@ -79,13 +79,12 @@
       <artifactId>commons-logging</artifactId>
       <version>1.2</version>
     </dependency>
-<!--
     <dependency>
       <groupId>org.ow2.asm</groupId>
       <artifactId>asm</artifactId>
       <version>9.1</version>
     </dependency>
--->
+<!--
         <dependency>
           <groupId>asm</groupId>
           <artifactId>asm</artifactId>
@@ -93,6 +92,7 @@
           <scope>system</scope>
           <systemPath>${project.basedir}/../lib/asm/asm-9.1.renamed.jar</systemPath>
         </dependency>
+-->
   </dependencies>
   <build>
 
