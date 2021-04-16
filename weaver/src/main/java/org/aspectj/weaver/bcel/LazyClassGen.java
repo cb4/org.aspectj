@@ -81,7 +81,10 @@ import java.util.Vector;
  * different if this represents an Aspect.
  */
 public final class LazyClassGen {
-private static final ClassReader tempReader = null;
+
+    // TODO cb4 temporary to force asm to be available.
+    private static final ClassReader tempReader = null;
+
 public static final ObjectType proceedingTjpType = new ObjectType("org.aspectj.lang.ProceedingJoinPoint");
 public static final ObjectType tjpType = new ObjectType("org.aspectj.lang.JoinPoint");
 public static final ObjectType staticTjpType = new ObjectType("org.aspectj.lang.JoinPoint$StaticPart");
