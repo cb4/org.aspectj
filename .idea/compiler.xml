@@ -1,34 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="BUILD_PROCESS_HEAP_SIZE" value="1536" />
-    <option name="BUILD_PROCESS_ADDITIONAL_VM_OPTIONS" value="3096" />
-    <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-      </profile>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="testing-client" />
-        <module name="run-all-junit-tests" />
         <module name="loadtime" />
         <module name="org.eclipse.jdt.core" />
+        <module name="run-all-junit-tests" />
         <module name="ajde" />
+        <module name="ajdoc" />
         <module name="taskdefs" />
         <module name="testing" />
-        <module name="ajdoc" />
         <module name="testing-util" />
         <module name="runtime" />
         <module name="ajde.core" />
         <module name="org.aspectj.ajdt.core" />
         <module name="tests" />
-        <module name="docs" />
         <module name="util" />
+        <module name="docs" />
         <module name="bcel-builder" />
         <module name="build" />
         <module name="testing-drivers" />
@@ -38,7 +30,7 @@
         <module name="weaver" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
+    <bytecodeTargetLevel>
       <module name="ajde" target="1.8" />
       <module name="ajde.core" target="1.8" />
       <module name="ajdoc" target="1.8" />
@@ -68,8 +60,5 @@
       <module name="util" target="1.8" />
       <module name="weaver" target="1.8" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
   </component>
 </project>

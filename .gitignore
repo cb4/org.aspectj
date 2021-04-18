@@ -29,11 +29,16 @@ target/
 /org.aspectj.ajdt.core/testdata/src1/*~
 /org.aspectj.ajdt.core/testdata/src1/*.class
 /org.aspectj.ajdt.core/testdata/src1/p1
-/taskdefs/bin
-/tests/*/ajcore*.txt
+/run-all-junit-tests/ajcore.*
+/run-all-junit-tests/bin/
+/run-all-junit-tests/dir-*/*
+/run-all-junit-tests/IncrementalAjcTaskTest-temp/*
+/taskdefs/bin/
+/tests/*/ajcore.*
 /tests/_ajdump/*.*
 /tests/new/ajworkingdir
 /tests/src/test/resources/org/aspectj/systemtest/ajc150/tests
+
 
 # Log files
 log.txt
