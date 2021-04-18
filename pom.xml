@@ -84,6 +84,19 @@
         <!-- Plugin version management here for all modules is generally useful.
              It is required for IntelliJ IDEA 2020.3 to override older versions referenced
              in their maven implementation and super pom. -->
+
+        <!-- Do these go here or dependencyManagement?
+            They are dependencies in run-all-junit-tests and probably elsewhere.
+        <plugin>
+                  <groupId>org.apache.ant</groupId>
+                  <artifactId>ant</artifactId>
+                        <version>1.10.9</ver-all-junit-tests and probably elsewhere.
+                <plugin>
+                  <groupId>org.apache.ant</groupId>
+                  <artifactId>ant-launcher</artifactId>
+                        <version>1.10.9</version>
+                </plugin>
+        -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
@@ -194,7 +207,7 @@
           <filesets>
             <fileset>
               <directory>.</directory>
-              <includes>
+              <includes> <!-- Byproducts from testing -->
                 <include>**/ajcore*.*.txt</include>
               </includes>
               <!--

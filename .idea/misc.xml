@@ -7,9 +7,5 @@
       </list>
     </option>
   </component>
-  <component name="ProjectResources">
-    <resource url="xmlns:maven=&quot;antlib:org.apache.maven.artifact.ant&quot;" location="$PROJECT_DIR$" />
-    <xml-schema-version>XMLSchema_1_1</xml-schema-version>
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11.0.10" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11.0.10" project-jdk-type="JavaSDK" />
 </project>

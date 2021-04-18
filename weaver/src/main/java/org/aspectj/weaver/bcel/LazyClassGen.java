@@ -82,9 +82,6 @@ import java.util.Vector;
  */
 public final class LazyClassGen {
 
-    // TODO cb4 temporary to force asm to be available.
-    private static final ClassReader tempReader = null;
-
 public static final ObjectType proceedingTjpType = new ObjectType("org.aspectj.lang.ProceedingJoinPoint");
 public static final ObjectType tjpType = new ObjectType("org.aspectj.lang.JoinPoint");
 public static final ObjectType staticTjpType = new ObjectType("org.aspectj.lang.JoinPoint$StaticPart");
@@ -128,7 +125,7 @@ private final List<LazyMethodGen> methodGens = new ArrayList<>();
 private final List<LazyClassGen> classGens = new ArrayList<>();
 private final List<AnnotationGen> annotations = new ArrayList<>();
 private final InstructionFactory fact;
-int highestLineNumber = 0; // ---- JSR 45 info
+int highestLineNumber = 0; // ---- JSR45 info
 Map<CacheKey, Field> annotationCachingFieldCache = new HashMap<>();
 private boolean regenerateGenericSignatureAttribute = false;
 private BcelObjectType myType; // XXX is not set for types we create
@@ -140,76 +137,78 @@ private boolean isSerializable = false;
 private boolean hasSerialVersionUIDField = false;
 private boolean serialVersionUIDRequiresInitialization = false;
 
-// private Unknown getSourceDebugExtensionAttribute() {
-// int nameIndex = cp.addUtf8("SourceDebugExtension");
-// String data = getSourceDebugExtensionString();
-// //System.err.println(data);
-// byte[] bytes = Utility.stringToUTF(data);
-// int length = bytes.length;
-//
-// return new Unknown(nameIndex, length, bytes, cp);
-// }
+/*
+ ---- JSR45-related stuff
+     private Unknown getSourceDebugExtensionAttribute() {
+     int nameIndex = cp.addUtf8("SourceDebugExtension");
+     String data = getSourceDebugExtensionString();
+     //System.err.println(data);
+     byte[] bytes = Utility.stringToUTF(data);
+     int length = bytes.length;
 
-// private LazyClassGen() {}
-// public static void main(String[] args) {
-// LazyClassGen m = new LazyClassGen();
-// m.highestLineNumber = 37;
-// m.inlinedFiles.put("boo/baz/foo.java", new InlinedSourceFileInfo( 83));
-// m.inlinedFiles.put("boo/barz/foo.java", new InlinedSourceFileInfo(292));
-// m.inlinedFiles.put("boo/baz/moo.java", new InlinedSourceFileInfo(128));
-// m.calculateSourceDebugExtensionOffsets();
-// System.err.println(m.getSourceDebugExtensionString());
-// }
+     return new Unknown(nameIndex, length, bytes, cp);
+     }
 
-// For the entire pathname, we're using package names. This is probably
-// wrong.
-// private String getSourceDebugExtensionString() {
-// StringBuffer out = new StringBuffer();
-// String myFileName = getFileName();
-// // header section
-// out.append("SMAP\n");
-// out.append(myFileName);
-// out.append("\nAspectJ\n");
-// // stratum section
-// out.append("*S AspectJ\n");
-// // file section
-// out.append("*F\n");
-// out.append("1 ");
-// out.append(myFileName);
-// out.append("\n");
-// int i = 2;
-// for (Iterator iter = inlinedFiles.keySet().iterator(); iter.hasNext();) {
-// String element = (String) iter.next();
-// int ii = element.lastIndexOf('/');
-// if (ii == -1) {
-// out.append(i++); out.append(' ');
-// out.append(element); out.append('\n');
-// } else {
-// out.append("+ "); out.append(i++); out.append(' ');
-// out.append(element.substring(ii+1)); out.append('\n');
-// out.append(element); out.append('\n');
-// }
-// }
-// // emit line section
-// out.append("*L\n");
-// out.append("1#1,");
-// out.append(highestLineNumber);
-// out.append(":1,1\n");
-// i = 2;
-// for (Iterator iter = inlinedFiles.values().iterator(); iter.hasNext();) {
-// InlinedSourceFileInfo element = (InlinedSourceFileInfo) iter.next();
-// out.append("1#");
-// out.append(i++); out.append(',');
-// out.append(element.highestLineNumber); out.append(":");
-// out.append(element.offset + 1); out.append(",1\n");
-// }
-// // end section
-// out.append("*E\n");
-// // and finish up...
-// return out.toString();
-// }
+     private LazyClassGen() {}
+     public static void main(String[] args) {
+     LazyClassGen m = new LazyClassGen();
+     m.highestLineNumber = 37;
+     m.inlinedFiles.put("boo/baz/foo.java", new InlinedSourceFileInfo( 83));
+     m.inlinedFiles.put("boo/barz/foo.java", new InlinedSourceFileInfo(292));
+     m.inlinedFiles.put("boo/baz/moo.java", new InlinedSourceFileInfo(128));
+     m.calculateSourceDebugExtensionOffsets();
+     System.err.println(m.getSourceDebugExtensionString());
+     }
 
-// ---- end JSR45-related stuff
+     For the entire pathname, we're using package names. This is probably
+     wrong.
+     private String getSourceDebugExtensionString() {
+     StringBuffer out = new StringBuffer();
+     String myFileName = getFileName();
+     // header section
+     out.append("SMAP\n");
+     out.append(myFileName);
+     out.append("\nAspectJ\n");
+     // stratum section
+     out.append("*S AspectJ\n");
+     // file section
+     out.append("*F\n");
+     out.append("1 ");
+     out.append(myFileName);
+     out.append("\n");
+     int i = 2;
+     for (Iterator iter = inlinedFiles.keySet().iterator(); iter.hasNext();) {
+     String element = (String) iter.next();
+     int ii = element.lastIndexOf('/');
+     if (ii == -1) {
+     out.append(i++); out.append(' ');
+     out.append(element); out.append('\n');
+     } else {
+     out.append("+ "); out.append(i++); out.append(' ');
+     out.append(element.substring(ii+1)); out.append('\n');
+     out.append(element); out.append('\n');
+     }
+     }
+     // emit line section
+     out.append("*L\n");
+     out.append("1#1,");
+     out.append(highestLineNumber);
+     out.append(":1,1\n");
+     i = 2;
+     for (Iterator iter = inlinedFiles.values().iterator(); iter.hasNext();) {
+     InlinedSourceFileInfo element = (InlinedSourceFileInfo) iter.next();
+     out.append("1#");
+     out.append(i++); out.append(',');
+     out.append(element.highestLineNumber); out.append(":");
+     out.append(element.offset + 1); out.append(",1\n");
+     }
+     // end section
+     out.append("*E\n");
+     // and finish up...
+     return out.toString();
+     }
+ ---- end JSR45-related stuff
+*/
 private long calculatedSerialVersionUID;
 private boolean hasClinit = false;
 
@@ -577,25 +576,29 @@ public byte[] getJavaClassBytesIncludingReweavable(BcelWorld world) {
     // At 1.6 stackmaps are optional. They are required at 1.7+ unless turning off the verifier.
     if ((myGen.getMajor() == Constants.MAJOR_1_6 && world.shouldGenerateStackMaps()) ||
         myGen.getMajor() > Constants.MAJOR_1_6) {
-//			if (!AsmDetector.isAsmAround) {
-//        if (!AsmDetector.isAsmAround()) {
-//            throw new BCException(
-//                    "Unable to find Asm for stackmap generation (Looking for 'org.objectweb.asm.ClassReader'). " +
-//                    "Stackmap generation for woven code is required to avoid verify errors on a Java 1.7 or higher " +
-//                    "runtime");
-//        }
-//        wovenClassFileData = StackMapAdder.addStackMaps(world, wovenClassFileData);
-//    }
-//        byte[] data = new byte[1];
-//        reader = new ClassReader(data);
 
-        try {  //Check if Asm is available without initializing the class.
-            Class.forName("aj.org.objectweb.asm.ClassReader",false, getClass().getClassLoader());
-        }
-        catch (Exception e) {
-            throw new BCException(
-                    "Unable to find Asm ('aj.org.objectweb.asm.ClassReader') for stackmap generation.");
-        }
+        ClassReader tempReader = null;  //test for asm; can add breakpoint here
+/*        cb4 Was in AsmDetector.java, but only used here. Simplified and improved performance by not initializing the class.
+
+        			if (!AsmDetector.isAsmAround) {
+                if (!AsmDetector.isAsmAround()) {
+                    throw new BCException(
+                            "Unable to find Asm for stackmap generation (Looking for 'org.objectweb.asm.ClassReader'). " +
+                            "Stackmap generation for woven code is required to avoid verify errors on a Java 1.7 or higher " +
+                            "runtime");
+                }
+                wovenClassFileData = StackMapAdder.addStackMaps(world, wovenClassFileData);
+            }
+                byte[] data = new byte[1];
+                reader = new ClassReader(data);
+*/
+//        try {  //Check if Asm is available without initializing the class.
+//            Class.forName("org.objectweb.asm.ClassReader",false, getClass().getClassLoader());
+//        }
+//        catch (Exception e) {
+//            throw new BCException(
+//                    "Unable to find Asm ('org.objectweb.asm.ClassReader') for stackmap generation.");
+//        }
         wovenClassFileData = StackMapAdder.addStackMaps(world, wovenClassFileData);
     }
 
