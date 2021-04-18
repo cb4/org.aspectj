@@ -589,7 +589,7 @@ public byte[] getJavaClassBytesIncludingReweavable(BcelWorld world) {
 //        byte[] data = new byte[1];
 //        reader = new ClassReader(data);
 
-        try {  //Check if Asm is available.
+        try {  //Check if Asm is available without initializing the class.
             Class.forName("aj.org.objectweb.asm.ClassReader",false, getClass().getClassLoader());
         }
         catch (Exception e) {
