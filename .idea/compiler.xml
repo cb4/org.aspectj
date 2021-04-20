@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="run-all-junit-tests" />
+        <module name="taskdefs" />
+        <module name="ajde" />
+        <module name="ajde.core" />
+        <module name="org.aspectj.ajdt.core" />
+        <module name="docs" />
+        <module name="bcel-builder" />
+        <module name="testing-client" />
+        <module name="org.eclipse.jdt.core" />
+        <module name="loadtime" />
+        <module name="ajdoc" />
+        <module name="testing" />
+        <module name="testing-util" />
+        <module name="tests" />
+        <module name="util" />
+        <module name="build" />
+        <module name="testing-drivers" />
+        <module name="org.aspectj.matcher" />
+        <module name="asm" />
+        <module name="bridge" />
+        <module name="weaver" />
+      </profile>
+      <profile name="Annotation profile for runtime" enabled="true">
+        <sourceOutputDir name="../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="runtime" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ajbrowser" target="1.8" />
+      <module name="ajde" target="1.8" />
+      <module name="ajde.core" target="1.8" />
+      <module name="ajdoc" target="1.8" />
+      <module name="asm" target="1.8" />
+      <module name="aspectj-certificate-problem" target="1.6" />
+      <module name="aspectj-parent" target="1.5" />
+      <module name="aspectjmatcher" target="1.5" />
+      <module name="aspectjmatcher (2)" target="1.5" />
+      <module name="aspectjmatcher (3)" target="1.5" />
+      <module name="aspectjmatcher (4)" target="1.5" />
+      <module name="aspectjrt" target="1.5" />
+      <module name="aspectjrt (2)" target="1.5" />
+      <module name="aspectjrt (3)" target="1.5" />
+      <module name="aspectjrt (4)" target="1.5" />
+      <module name="aspectjrt (5)" target="1.5" />
+      <module name="aspectjrt (6)" target="1.5" />
+      <module name="aspectjtools" target="1.5" />
+      <module name="aspectjtools (2)" target="1.5" />
+      <module name="aspectjtools (3)" target="1.5" />
+      <module name="aspectjtools (4)" target="1.5" />
+      <module name="aspectjtools (5)" target="1.5" />
+      <module name="aspectjtools (6)" target="1.5" />
+      <module name="aspectjweaver" target="1.5" />
+      <module name="aspectjweaver (2)" target="1.5" />
+      <module name="aspectjweaver (3)" target="1.5" />
+      <module name="aspectjweaver (4)" target="1.5" />
+      <module name="aspectjweaver (5)" target="1.5" />
+      <module name="aspectjweaver (6)" target="1.5" />
+      <module name="bcel-builder" target="1.8" />
+      <module name="bridge" target="1.8" />
+      <module name="build" target="1.8" />
+      <module name="docs" target="1.8" />
+      <module name="installer" target="1.5" />
+      <module name="loadtime" target="1.8" />
+      <module name="org.aspectj.ajdt.core" target="1.8" />
+      <module name="org.aspectj.matcher" target="1.8" />
+      <module name="org.eclipse.jdt.core" target="1.8" />
+      <module name="run-all-junit-tests" target="1.8" />
+      <module name="runtime" target="1.5" />
+      <module name="runtime (2)" target="1.8" />
+      <module name="taskdefs" target="1.8" />
+      <module name="testing" target="1.8" />
+      <module name="testing-client" target="1.8" />
+      <module name="testing-drivers" target="1.8" />
+      <module name="testing-util" target="1.8" />
+      <module name="tests" target="1.8" />
+      <module name="util" target="1.8" />
+      <module name="weaver" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

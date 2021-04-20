@@ -1,0 +1,25 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Ajc1810Tests.testBinding_508661" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <output_file path="I:\locPtemp\ajc1810-tests11.txt" is_save="true" />
+    <module name="tests" />
+    <selectedOptions>
+      <option name="workingDirectory" />
+    </selectedOptions>
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.aspectj.systemtest.ajc1810.Ajc1810Tests" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="org.aspectj.systemtest.ajc1810" />
+    <option name="MAIN_CLASS_NAME" value="org.aspectj.systemtest.ajc1810.Ajc1810Tests" />
+    <option name="METHOD_NAME" value="testBinding_508661" />
+    <option name="TEST_OBJECT" value="method" />
+    <option name="VM_PARAMETERS" value="-ea " />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+    <option name="TEST_SEARCH_SCOPE">
+      <value defaultName="wholeProject" />
+    </option>
+    <method v="2" />
+  </configuration>
+</component>
