@@ -15,7 +15,7 @@
     <orderEntry type="module-library">
       <library name="Maven: jdiff:jdiff:1.0">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/jdiff/jdiff.jar!/" />
+          <root url="jar://$MODULE_DIR$/../testing-util/../lib/jdiff/jdiff.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
