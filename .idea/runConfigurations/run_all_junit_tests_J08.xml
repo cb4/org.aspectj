@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="run-all-junit-tests J08" type="JUnit" factoryName="JUnit">
+    <output_file path="I:\locPtemp\run-all-tests08.txt" is_save="true" />
+    <module name="run-all-junit-tests" />
+    <selectedOptions>
+      <option name="environmentVariables" visible="false" />
+      <option name="workingDirectory" />
+    </selectedOptions>
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" value="8" />
+    <option name="PACKAGE_NAME" value="" />
+    <option name="MAIN_CLASS_NAME" value="" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="directory" />
+    <option name="VM_PARAMETERS" value="-ea " />
+    <option name="WORKING_DIRECTORY" value="" />
+    <dir value="$PROJECT_DIR$/../run-all-junit-tests" />
+    <method v="2" />
+  </configuration>
+</component>
