@@ -25,7 +25,7 @@
     <orderEntry type="module" module-name="runtime" />
     <orderEntry type="module" module-name="weaver" />
     <orderEntry type="module" module-name="org.aspectj.matcher" />
-    <orderEntry type="module" module-name="ajde.core" production-on-test="" />
+    <orderEntry type="module" module-name="ajde.core" scope="TEST" production-on-test="" />
     <orderEntry type="module" module-name="bcel-builder" />
     <orderEntry type="module" module-name="testing" />
     <orderEntry type="module" module-name="ajde" />
@@ -55,11 +55,11 @@
     <orderEntry type="library" name="Maven: jakarta-regexp:jakarta-regexp:1.4" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.13" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
-    <orderEntry type="module" module-name="testing" production-on-test="" />
+    <orderEntry type="module" module-name="testing" scope="TEST" production-on-test="" />
     <orderEntry type="module" module-name="testing-drivers" />
     <orderEntry type="module" module-name="testing-util" />
     <orderEntry type="module" module-name="org.aspectj.ajdt.core" />
-    <orderEntry type="module" module-name="org.aspectj.ajdt.core" production-on-test="" />
+    <orderEntry type="module" module-name="org.aspectj.ajdt.core" scope="TEST" production-on-test="" />
     <orderEntry type="module-library">
       <library name="Maven: org.aspectj:org.eclipse.jdt.core:1.0">
         <CLASSES>
