@@ -12,6 +12,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="util" />
+    <orderEntry type="module" module-name="util" />
     <orderEntry type="module" module-name="bridge" />
     <orderEntry type="module" module-name="testing-util" />
     <orderEntry type="library" name="Maven: junit:junit:4.13" level="project" />
@@ -19,7 +20,7 @@
     <orderEntry type="module-library">
       <library name="Maven: jdiff:jdiff:1.0">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/jdiff/jdiff.jar!/" />
+          <root url="jar://$MODULE_DIR$/../testing-util/../lib/jdiff/jdiff.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

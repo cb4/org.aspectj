@@ -12,6 +12,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="util" />
+    <orderEntry type="module" module-name="asm" />
+    <orderEntry type="module" module-name="weaver" />
+    <orderEntry type="module" module-name="loadtime" />
+    <orderEntry type="module" module-name="util" />
     <orderEntry type="module" module-name="bridge" />
     <orderEntry type="module" module-name="asm" />
     <orderEntry type="module" module-name="ajde.core" />
@@ -28,7 +32,7 @@
     <orderEntry type="module-library">
       <library name="Maven: jdiff:jdiff:1.0">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/jdiff/jdiff.jar!/" />
+          <root url="jar://$MODULE_DIR$/../testing-util/../lib/jdiff/jdiff.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -39,7 +43,7 @@
     <orderEntry type="module-library">
       <library name="Maven: jrockit:jrockit:1.0">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/ext/jrockit/jrockit.jar!/" />
+          <root url="jar://$MODULE_DIR$/../loadtime/../lib/ext/jrockit/jrockit.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -52,7 +56,7 @@
     <orderEntry type="module-library">
       <library name="Maven: org.aspectj:org.eclipse.jdt.core:1.0">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../org.eclipse.jdt.core/jdtcore-for-aspectj.jar!/" />
+          <root url="jar://$MODULE_DIR$/../ajde.core/../org.eclipse.jdt.core/jdtcore-for-aspectj.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

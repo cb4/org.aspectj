@@ -592,13 +592,13 @@ public byte[] getJavaClassBytesIncludingReweavable(BcelWorld world) {
                 byte[] data = new byte[1];
                 reader = new ClassReader(data);
 */
-//        try {  //Check if Asm is available without initializing the class.
-//            Class.forName("org.objectweb.asm.ClassReader",false, getClass().getClassLoader());
-//        }
-//        catch (Exception e) {
-//            throw new BCException(
-//                    "Unable to find Asm ('org.objectweb.asm.ClassReader') for stackmap generation.");
-//        }
+        try {  //Check if Asm is available without initializing the class.
+            Class.forName("org.objectweb.asm.ClassReader",false, getClass().getClassLoader());
+        }
+        catch (Exception e) {
+            throw new BCException(
+                    "Unable to find Asm ('org.objectweb.asm.ClassReader') for stackmap generation.");
+        }
         wovenClassFileData = StackMapAdder.addStackMaps(world, wovenClassFileData);
     }
 
