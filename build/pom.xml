@@ -20,6 +20,12 @@
 			<version>${project.version}</version>
 		</dependency>
 
+      <dependency>
+        <groupId>org.apache.ant</groupId>
+        <artifactId>ant</artifactId>
+        <version>1.10.9</version>
+      </dependency>
+<!--
 		<dependency>
 			<groupId>ant</groupId>
 			<artifactId>ant</artifactId>
@@ -27,6 +33,7 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/../lib/ant/lib/ant.jar</systemPath>
 		</dependency>
+-->
 	</dependencies>
 
 	<build>
@@ -34,7 +41,6 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.9.1</version>
 				<executions>
 					<execution>
 						<id>build.date</id>

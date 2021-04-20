@@ -4,13 +4,12 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/org.aspectj.lib/pom.xml" />
+        <option value="$PROJECT_DIR$/../runtime/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/ajbrowser/pom.xml" />
-        <option value="$PROJECT_DIR$/runtime/pom.xml" />
       </set>
     </option>
   </component>

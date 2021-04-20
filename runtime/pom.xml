@@ -8,7 +8,6 @@
 		<artifactId>aspectj-parent</artifactId>
 		<version>1.9.7.BUILD-SNAPSHOT</version>
 	</parent>
-<!--  TODO cb4 delete me -->
 
 	<artifactId>runtime</artifactId>
 	<packaging>jar</packaging>

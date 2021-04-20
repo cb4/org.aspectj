@@ -21,7 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/org.aspectj.matcher/org.aspectj.matcher.iml" filepath="$PROJECT_DIR$/org.aspectj.matcher/org.aspectj.matcher.iml" />
       <module fileurl="file://$PROJECT_DIR$/org.eclipse.jdt.core/org.eclipse.jdt.core.iml" filepath="$PROJECT_DIR$/org.eclipse.jdt.core/org.eclipse.jdt.core.iml" />
       <module fileurl="file://$PROJECT_DIR$/run-all-junit-tests/run-all-junit-tests.iml" filepath="$PROJECT_DIR$/run-all-junit-tests/run-all-junit-tests.iml" />
-      <module fileurl="file://$PROJECT_DIR$/org.aspectj.lib/runtime.iml" filepath="$PROJECT_DIR$/org.aspectj.lib/runtime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runtime/runtime.iml" filepath="$PROJECT_DIR$/runtime/runtime.iml" />
       <module fileurl="file://$PROJECT_DIR$/taskdefs/taskdefs.iml" filepath="$PROJECT_DIR$/taskdefs/taskdefs.iml" />
       <module fileurl="file://$PROJECT_DIR$/testing/testing.iml" filepath="$PROJECT_DIR$/testing/testing.iml" />
       <module fileurl="file://$PROJECT_DIR$/testing-client/testing-client.iml" filepath="$PROJECT_DIR$/testing-client/testing-client.iml" />

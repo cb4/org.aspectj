@@ -12,12 +12,13 @@ log.txt
 
 # Eclipse
 .classpath
-.project
-.settings
+#.project
+#.settings
 
 # IntelliJ IDEA
 *.iml
-#.idea/
+.idea/libraries/
+.idea/workspace.xml
 
 # Visual Studio Code
 .vscode
@@ -27,9 +28,6 @@ log.txt
 
 # Linux
 .attach_pid*
-
-# No idea where these come from
-bin/
 
 # When using a RAM disk to speed up development, see how-to in docs/developer/ram-disk/settings-ramdisk.xml
 /.mvn/maven.config

@@ -4,13 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e630b5a-08f9-4664-9ec3-36e4eca30e39" name="Default Changelist" comment="fix project setup" />
+    <list default="true" id="7e630b5a-08f9-4664-9ec3-36e4eca30e39" name="Default Changelist" comment="fix project setup">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_olivergondza_maven_jdk_tools_wrapper_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_runtime_1_9_7_BUILD_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_vintage_junit_vintage_engine_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/build-aspectjlib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/build.ajproperties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/org.aspectj.lib.mf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/readme-org.aspectj.lib.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/src/main/java/org/aspectj/lib/pointcuts/Pointcuts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/src/main/java/org/aspectj/lib/tracing/TraceJoinPoints.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/src/main/java/org/aspectj/lib/tracing/TraceJoinPointsBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/src/test/java/org/aspectj/lib/LibModuleTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/src/test/java/org/aspectj/lib/pointcuts/PointcutsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/src/test/java/org/aspectj/lib/pointcuts/PointcutsTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/src/test/java/org/aspectj/lib/tracing/TraceJoinPointsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.aspectj.lib/src/test/java/org/aspectj/lib/tracing/TracingTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="kj16-cb4" />
@@ -48,7 +83,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.runConfigurations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/runtime" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2748037" />
@@ -57,30 +92,31 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\locPubAJ\org.aspectj\runtime" />
       <recent name="I:\locPubAJ\org.aspectj\lib\test" />
       <recent name="I:\locPubAJ\org.aspectj\lib\junit" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.11 run-all-tests">
+  <component name="RunManager" selected="Maven.11 clean install">
     <list>
-      <item itemvalue="Maven.11 run-all-tests" />
-      <item itemvalue="Maven.08 run-all-tests" />
-      <item itemvalue="Maven.08 tests module tests" />
-      <item itemvalue="Maven.run-all build" />
       <item itemvalue="JUnit.run-all-junit-tests J08" />
-      <item itemvalue="Maven.run-all-tests" />
-      <item itemvalue="Maven.11 tests module tests" />
       <item itemvalue="JUnit.build ModuleTest" />
       <item itemvalue="JUnit.Ajc1810Tests.testBinding_508661" />
-      <item itemvalue="Maven.15 clean install" />
       <item itemvalue="JUnit.run-all-junit-tests J15" />
       <item itemvalue="JUnit.Ajc1810Tests" />
-      <item itemvalue="Maven.11 clean install" />
-      <item itemvalue="Maven.08 clean install" />
       <item itemvalue="JUnit.run-all-junit-tests J11" />
       <item itemvalue="JUnit.All in run-all-junit-tests" />
       <item itemvalue="JUnit.build.internal" />
       <item itemvalue="JUnit.ajc1810" />
+      <item itemvalue="Maven.11 run-all-tests" />
+      <item itemvalue="Maven.08 run-all-tests" />
+      <item itemvalue="Maven.08 tests module tests" />
+      <item itemvalue="Maven.run-all build" />
+      <item itemvalue="Maven.run-all-tests" />
+      <item itemvalue="Maven.11 tests module tests" />
+      <item itemvalue="Maven.15 clean install" />
+      <item itemvalue="Maven.11 clean install" />
+      <item itemvalue="Maven.08 clean install" />
       <item itemvalue="Maven.run-all-tests 11" />
     </list>
   </component>
@@ -158,7 +194,28 @@
       <option name="project" value="LOCAL" />
       <updated>1618891408065</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix project setup">
+      <created>1618891475946</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1618891475946</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix project setup">
+      <created>1618891482600</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1618891482600</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix project setup">
+      <created>1618891487203</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1618891487203</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +229,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="kj-orig" />
+                        <option value="kj16-cb4" />
                       </list>
                     </value>
                   </entry>

@@ -6,33 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="run-all-junit-tests" />
-        <module name="taskdefs" />
-        <module name="ajde" />
-        <module name="ajde.core" />
-        <module name="org.aspectj.ajdt.core" />
-        <module name="docs" />
-        <module name="bcel-builder" />
         <module name="testing-client" />
+        <module name="run-all-junit-tests" />
         <module name="org.eclipse.jdt.core" />
         <module name="loadtime" />
+        <module name="taskdefs" />
+        <module name="ajde" />
         <module name="ajdoc" />
         <module name="testing" />
+        <module name="ajde.core" />
         <module name="testing-util" />
+        <module name="runtime" />
+        <module name="org.aspectj.ajdt.core" />
         <module name="tests" />
+        <module name="docs" />
         <module name="util" />
+        <module name="bcel-builder" />
         <module name="build" />
         <module name="testing-drivers" />
         <module name="org.aspectj.matcher" />
         <module name="asm" />
         <module name="bridge" />
         <module name="weaver" />
-      </profile>
-      <profile name="Annotation profile for runtime" enabled="true">
-        <sourceOutputDir name="../target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="runtime" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -75,8 +70,8 @@
       <module name="org.aspectj.matcher" target="1.8" />
       <module name="org.eclipse.jdt.core" target="1.8" />
       <module name="run-all-junit-tests" target="1.8" />
-      <module name="runtime" target="1.5" />
-      <module name="runtime (2)" target="1.8" />
+      <module name="runtime" target="1.8" />
+      <module name="runtime (2)" target="1.5" />
       <module name="taskdefs" target="1.8" />
       <module name="testing" target="1.8" />
       <module name="testing-client" target="1.8" />
