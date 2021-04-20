@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e630b5a-08f9-4664-9ec3-36e4eca30e39" name="Default Changelist" comment="LazyClassGen asm check re-added" />
+    <list default="true" id="7e630b5a-08f9-4664-9ec3-36e4eca30e39" name="Default Changelist" comment="fix project setup" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,11 +48,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.runConfigurations" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2748037" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/../.runConfigurations" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -64,6 +65,23 @@
     <list>
       <item itemvalue="Maven.11 run-all-tests" />
       <item itemvalue="Maven.08 run-all-tests" />
+      <item itemvalue="Maven.08 tests module tests" />
+      <item itemvalue="Maven.run-all build" />
+      <item itemvalue="JUnit.run-all-junit-tests J08" />
+      <item itemvalue="Maven.run-all-tests" />
+      <item itemvalue="Maven.11 tests module tests" />
+      <item itemvalue="JUnit.build ModuleTest" />
+      <item itemvalue="JUnit.Ajc1810Tests.testBinding_508661" />
+      <item itemvalue="Maven.15 clean install" />
+      <item itemvalue="JUnit.run-all-junit-tests J15" />
+      <item itemvalue="JUnit.Ajc1810Tests" />
+      <item itemvalue="Maven.11 clean install" />
+      <item itemvalue="Maven.08 clean install" />
+      <item itemvalue="JUnit.run-all-junit-tests J11" />
+      <item itemvalue="JUnit.All in run-all-junit-tests" />
+      <item itemvalue="JUnit.build.internal" />
+      <item itemvalue="JUnit.ajc1810" />
+      <item itemvalue="Maven.run-all-tests 11" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -133,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618887075663</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix project setup">
+      <created>1618891408065</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1618891408065</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +188,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="after 11-clean-install, execute run-all-junit-tests with java 8" />
     <MESSAGE value="LazyClassGen asm check re-added" />
-    <option name="LAST_COMMIT_MESSAGE" value="LazyClassGen asm check re-added" />
+    <MESSAGE value="fix project setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix project setup" />
   </component>
 </project>
