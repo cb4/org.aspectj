@@ -8,12 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="testing-client" />
         <module name="run-all-junit-tests" />
-        <module name="loadtime" />
         <module name="org.eclipse.jdt.core" />
+        <module name="loadtime" />
         <module name="ajde" />
         <module name="ajdoc" />
-        <module name="taskdefs" />
         <module name="testing" />
+        <module name="taskdefs" />
         <module name="runtime" />
         <module name="ajde.core" />
         <module name="testing-util" />
@@ -21,8 +21,8 @@
         <module name="tests" />
         <module name="docs" />
         <module name="util" />
-        <module name="bcel-builder" />
         <module name="build" />
+        <module name="bcel-builder" />
         <module name="testing-drivers" />
         <module name="org.aspectj.matcher" />
         <module name="asm" />
